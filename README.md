@@ -1,45 +1,44 @@
-Portfólio - Matheus Felix 🚀
+Portfolio - Matheus Felix 🚀
 
-Bem-vindo ao meu Portfólio Pessoal, um projeto desenvolvido para exibir minhas habilidades em desenvolvimento web. Este site foi criado com foco em oferecer uma experiência interativa, moderna e responsiva, adaptada para todos os tamanhos de tela, desde dispositivos móveis até desktops.
-Tecnologias Utilizadas 🛠️
+Welcome to my Personal Portfolio, a project designed to showcase my web development skills. This website was built with a focus on delivering an interactive, modern, and responsive experience, tailored to all screen sizes—from mobile devices to desktops.
+Technologies Used 🛠️
 
-O portfólio foi construído com as seguintes tecnologias:
+The portfolio was built using the following technologies:
 
-    HTML: Estrutura básica e semântica das páginas
-    CSS: Estilização personalizada para um design único
-    Tailwind CSS: Framework para layouts responsivos e estilização ágil
-    JavaScript: Funcionalidades dinâmicas e interatividade
+    HTML: Basic and semantic page structure
+    CSS: Custom styling for a unique design
+    Tailwind CSS: Framework for responsive layouts and agile styling
+    JavaScript: Dynamic functionalities and interactivity
 
-Funcionalidades ✨
+Features ✨
 
-Este portfólio inclui as seguintes características:
+This portfolio includes the following features:
 
-    Design Responsivo: Interface que se adapta perfeitamente a smartphones, tablets e desktops
-    Navegação Fluida: Estrutura intuitiva para explorar meus projetos e habilidades
-    Interatividade: Animações e efeitos implementados com JavaScript para uma experiência envolvente
-    Estilo Moderno: Uso de Tailwind CSS para um visual limpo, elegante e atual
+    Responsive Design: Interface that adapts seamlessly to smartphones, tablets, and desktops
+    Smooth Navigation: Intuitive structure to explore my projects and skills
+    Interactivity: Animations and effects implemented with JavaScript for an engaging experience
+    Modern Style: Use of Tailwind CSS for a clean, elegant, and contemporary look
 
-Objetivo 🎯
+Objective 🎯
 
-Este projeto foi desenvolvido para destacar minhas competências em:
+This project was developed to highlight my skills in:
 
-    Criação de interfaces responsivas e acessíveis com Tailwind CSS
-    Implementação de funcionalidades dinâmicas com JavaScript
-    Uso eficiente de HTML e CSS para estruturação e estilização
-    Desenvolvimento de projetos web modernos e otimizados
+    Creating responsive and accessible interfaces with Tailwind CSS
+    Implementing dynamic functionalities with JavaScript
+    Efficient use of HTML and CSS for structure and styling
+    Building modern and optimized web projects
 
-Website Hospedado 🌐
+Hosted Website 🌐
 
-Você pode conferir a versão online do meu portfólio aqui: https://portfolio-matheusfl.netlify.app/
+You can check out the online version of my portfolio here: https://portfolio-matheusfl.netlify.app/
+Note ℹ️
 
-Observação ℹ️
+This portfolio reflects my learning journey and passion for web development. It serves as a showcase for my projects and technical skills, and it is continuously evolving.
+Contact 📧
 
-Este portfólio é um reflexo do meu aprendizado e paixão por desenvolvimento web. Ele serve como uma vitrine para meus projetos e habilidades técnicas, estando em constante evolução.
-Contato 📧
-
-Se quiser saber mais sobre meu trabalho ou entrar em contato, sinta-se à vontade:
+If you’d like to learn more about my work or get in touch, feel free to reach out:
 
     Email: matheus.dev91@gmail.com
     LinkedIn: https://www.linkedin.com/in/matheus-fl/
 
-Matheus Felix – Desenvolvedor Web apaixonado por criar experiências digitais incríveis! 💻
+Matheus Felix – A Web Developer passionate about creating amazing digital experiences! 💻
