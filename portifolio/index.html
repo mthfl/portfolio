@@ -19,11 +19,11 @@
 </head>
 
 <body class="bg-gray-900 text-white overflow-x-hidden cursor pointer">
-  
+
     <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md ">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
-            
+
                 <div class="flex items-center">
                     <svg width="40" height="40" viewBox="0 0 100 100"
                         class="transform hover:scale-105 transition-transform duration-500">
@@ -40,48 +40,59 @@
                                 </feMerge>
                             </filter>
                         </defs>
-                        <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="url(#logoGradient)" filter="url(#glow)" />
+                        <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="url(#logoGradient)"
+                            filter="url(#glow)" />
                         <path d="M30 65 L30 35 L50 55 L70 35 L70 65" stroke="white" stroke-width="4" fill="none"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2.5s" fill="freeze" />
+                            <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2.5s"
+                                fill="freeze" />
                         </path>
                         <circle cx="30" cy="35" r="2" fill="white" class="animate-pulse" />
                         <circle cx="70" cy="35" r="2" fill="white" class="animate-pulse" />
                     </svg>
                 </div>
-    
-               
+
+
                 <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="#inicio" class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Home</a>
-                    <a href="#about" class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">About </a>
-                    <a href="#achievements" class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Achievements</a>
-                    <a href="#projetos" class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Projects</a>
-                    <a href="#skills" class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Skills</a>
+                    <a href="#inicio"
+                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Home</a>
+                    <a href="#about"
+                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">About
+                    </a>
+                    <a href="#achievements"
+                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Achievements</a>
+                    <a href="#projetos"
+                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Projects</a>
+                    <a href="#skills"
+                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Skills</a>
                 </div>
-    
-              
+
+
                 <button id="menu-toggle"
                     class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors focus:outline-none text-gray-200">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
         </div>
     </nav>
-    
-  
+
+
     <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
-    
+
 
     <div id="mobile-menu"
         class="fixed top-0 right-0 h-full w-full sm:w-80 bg-gray-900 z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl">
         <div class="flex flex-col h-full p-6">
             <div class="flex justify-between items-center mb-8">
-                <h2 class="text-xl font-bold bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">Menu</h2>
+                <h2 class="text-xl font-bold bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
+                    Menu</h2>
                 <button id="close-menu" class="p-2 hover:bg-gray-800 rounded-lg transition-colors text-gray-200">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                     </svg>
                 </button>
             </div>
@@ -89,7 +100,8 @@
                 <a href="#inicio"
                     class="text-gray-200 text-lg hover:text-green-400 transition-all duration-300 font-medium">Home</a>
                 <a href="#about"
-                    class="text-gray-200 text-lg hover:text-green-400 transition-all duration-300 font-medium">About </a>
+                    class="text-gray-200 text-lg hover:text-green-400 transition-all duration-300 font-medium">About
+                </a>
                 <a href="#achievements"
                     class="text-gray-200 text-lg hover:text-green-400 transition-all duration-300 font-medium">Achievements</a>
                 <a href="#projetos"
@@ -99,50 +111,50 @@
             </div>
         </div>
     </div>
-    
+
     <script>
-   
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeMenu = document.getElementById('close-menu');
-    const menuBackdrop = document.getElementById('mobile-menu-backdrop');
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a'); 
-    
-  
-    function closeMobileMenu() {
-        mobileMenu.classList.add('translate-x-full');
-        mobileMenu.classList.remove('translate-x-0');
-        menuBackdrop.classList.add('hidden');
-    }
-    
- 
-    menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('translate-x-full');
-        mobileMenu.classList.toggle('translate-x-0');
-        menuBackdrop.classList.toggle('hidden');
-    });
-    
 
-    closeMenu.addEventListener('click', closeMobileMenu);
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const menuBackdrop = document.getElementById('mobile-menu-backdrop');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
 
-    menuBackdrop.addEventListener('click', closeMobileMenu);
-    
- 
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+            menuBackdrop.classList.add('hidden');
+        }
+
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
+            menuBackdrop.classList.toggle('hidden');
+        });
+
+
+        closeMenu.addEventListener('click', closeMobileMenu);
+
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
     </script>
     <section id="inicio"
         class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div class="container mx-auto px-6 py-20 text-center">
-          
+
             <div class="relative mx-auto w-56 h-56 sm:w-72 sm:h-72 mb-16 group">
-               
+
                 <div
                     class="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 via-blue-500 to-green-400 blur-xl opacity-75 animate-gradient-xy group-hover:opacity-100 transition-opacity duration-300">
                 </div>
 
-              
+
                 <div
                     class="relative w-full h-full rounded-full p-1 bg-gradient-to-r from-green-400 to-blue-500 rotate-3 hover:rotate-6 transition-transform duration-300">
                     <div class="w-full h-full rounded-full overflow-hidden bg-gray-900 p-2">
@@ -151,7 +163,7 @@
                     </div>
                 </div>
 
-           
+
                 <div class="absolute -top-4 -right-4 w-8 h-8 bg-green-400 rounded-full blur-sm animate-pulse"></div>
                 <div class="absolute -bottom-4 -left-4 w-8 h-8 bg-blue-500 rounded-full blur-sm animate-pulse"></div>
             </div>
@@ -166,7 +178,7 @@
                 Front-End Developer and UX/UI specialist crafting elegant and functional digital solutions.
             </p>
 
-   
+
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#projetos"
                     class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg bg-gradient-to-r from-green-500 to-blue-500 text-white transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
@@ -198,17 +210,18 @@
                 class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent animate-fade-in">
                 About Me
             </h2>
-    
+
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-900 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+                <div
+                    class="bg-gray-900 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
                     <div class="flex flex-col items-center gap-8">
-                        
+
                         <div class="w-full space-y-6">
                             <div class="text-center animate-fade-in">
-                                <h3 class="text-xl sm:text-2xl font-semibold text-blue-500 mb-4">
+                                <h3 class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent mb-4">
                                     Front-End Developer & AI Specialist
                                 </h3>
-    
+
                                 <div class="grid grid-cols-3 gap-4 mb-6">
                                     <div class="p-4 bg-gray-800 rounded-lg">
                                         <span class="text-xs sm:text-sm text-gray-400">Years of Experience</span>
@@ -226,7 +239,7 @@
                                             data-type="satisfaction" data-value="100">0</span>
                                     </div>
                                 </div>
-    
+
                                 <div class="space-y-4 text-gray-300">
                                     <p class="text-base sm:text-lg leading-relaxed">
                                         Hi! I'm <span class="text-blue-400 font-medium">Matheus Felix</span>,
@@ -244,7 +257,7 @@
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div class="flex justify-center gap-4 mt-6">
                                 <a href="https://www.linkedin.com/in/matheus-fl" target="_blank"
                                     class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-lg font-medium hover:scale-105 transition-transform duration-300 text-sm sm:text-base"
@@ -258,69 +271,70 @@
             </div>
         </div>
     </section>
-    
+
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const typewriters = document.querySelectorAll('.typewriter');
-        const aboutSection = document.getElementById('about');
-    
-        const animateValue = (element, start, end, duration) => {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const current = Math.floor(progress * (end - start) + start);
-    
-                if (element.getAttribute('data-type') === 'satisfaction') {
-                    element.textContent = `${current}%`;
-                } else {
-                    element.textContent = current;
-                }
-    
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
+        document.addEventListener('DOMContentLoaded', () => {
+            const typewriters = document.querySelectorAll('.typewriter');
+            const aboutSection = document.getElementById('about');
+
+            const animateValue = (element, start, end, duration) => {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const current = Math.floor(progress * (end - start) + start);
+
+                    if (element.getAttribute('data-type') === 'satisfaction') {
+                        element.textContent = `${current}%`;
+                    } else {
+                        element.textContent = current;
+                    }
+
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
             };
-            window.requestAnimationFrame(step);
-        };
-    
-        
-        const animateAllCounters = () => {
-            typewriters.forEach(element => {
-                const finalValue = parseInt(element.getAttribute('data-value'));
-                animateValue(element, 0, finalValue, 3000);
+
+
+            const animateAllCounters = () => {
+                typewriters.forEach(element => {
+                    const finalValue = parseInt(element.getAttribute('data-value'));
+                    animateValue(element, 0, finalValue, 3000);
+                });
+            };
+
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+
+                        animateAllCounters();
+
+                        observer.unobserve(aboutSection);
+                    }
+                });
+            }, {
+                threshold: 0.3
             });
-        };
-    
-       
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    
-                    animateAllCounters();
-                   
-                    observer.unobserve(aboutSection);
-                }
-            });
-        }, {
-            threshold: 0.3 
+
+            // Observa a seção About
+            observer.observe(aboutSection);
         });
-    
-        // Observa a seção About
-        observer.observe(aboutSection);
-    });
     </script>
-    
+
     <style>
         .animate-fade-in {
             animation: fadeIn 0.8s ease-in;
         }
-    
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -329,156 +343,151 @@
     </style>
 
 
-<section id="achievements" class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Certifications & Achievements</h2>
+    <section id="achievements" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Certifications & Achievements</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      
-            <div class="achievement-card">
-                <div class="flex items-center justify-between mb-6">
-                    <img src="./assets/img/udemy_logo.jpg" alt="Udemy" class="h-10 rounded-md">
-                    <span class="text-gray-400">2025</span>
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-3">React</h3>
-                <a href="https://www.udemy.com/certificate/UC-774cf64b-d149-4b7b-aa59-95506289d1d9" 
-                   target="_blank" 
-                   class="certificate-link">
-                    View Certificate
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-         
-            <div class="achievement-card">
-                <div class="flex items-center justify-between mb-6">
-                    <img src="./assets/img/aluracursos_logo.jpg" alt="Alura" class="h-10 rounded-md">
-                    <span class="text-gray-400">2025</span>
+                <div class="achievement-card">
+                    <div class="flex items-center justify-between mb-6">
+                        <img src="./assets/img/udemy_logo.jpg" alt="Udemy" class="h-10 rounded-md">
+                        <span class="text-gray-400">2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">React</h3>
+                    <a href="https://www.udemy.com/certificate/UC-774cf64b-d149-4b7b-aa59-95506289d1d9" target="_blank"
+                        class="certificate-link">
+                        View Certificate
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
                 </div>
-                <h3 class="text-xl font-semibold text-white mb-3">Imersão Front-End 2ª Edição</h3>
-                <a href="https://cursos.alura.com.br/immersion/certificate/121af83a-9fdc-406b-8abf-54e404e57227?lang=pt_BR" 
-                   target="_blank" 
-                   class="certificate-link">
-                    View Certificate
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
-            </div>
 
-          
-            <div class="achievement-card">
-                <div class="flex items-center justify-between mb-6">
-                    <img src="./assets/img/linkedin_logo.jpg" alt="LinkedIn" class="h-10 rounded-md">
-                    <span class="text-gray-400">2025</span>
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-3">Introdução à Inteligência Artificial</h3>
-                <a href="https://media.licdn.com/dms/image/v2/D4D22AQFByvYWrRbBMQ/feedshare-shrink_1280/B4DZSuaSeRH0Ao-/0/1738092914863?e=1744243200&v=beta&t=7Cssjx42OKs1Zk9yEg0fFUXWobZbBN-a-1CkALcrV4o" 
-                   target="_blank" 
-                   class="certificate-link">
-                    View Certificate
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
-            </div>
 
-    
-            <div class="achievement-card">
-                <div class="flex items-center justify-between mb-6">
-                    <img src="./assets/img/logo-dio.svg" alt="DIO" class="h-10 rounded-md">
-                    <span class="text-gray-400">2025</span>
+                <div class="achievement-card">
+                    <div class="flex items-center justify-between mb-6">
+                        <img src="./assets/img/aluracursos_logo.jpg" alt="Alura" class="h-10 rounded-md">
+                        <span class="text-gray-400">2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Imersão Front-End 2ª Edição</h3>
+                    <a href="https://cursos.alura.com.br/immersion/certificate/121af83a-9fdc-406b-8abf-54e404e57227?lang=pt_BR"
+                        target="_blank" class="certificate-link">
+                        View Certificate
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
                 </div>
-                <h3 class="text-xl font-semibold text-white mb-3">Integração API</h3>
-                <a href="https://hermes.dio.me/certificates/EDIKMHDY.pdf" 
-                   target="_blank" 
-                   class="certificate-link">
-                    View Certificate
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
+
+
+                <div class="achievement-card">
+                    <div class="flex items-center justify-between mb-6">
+                        <img src="./assets/img/linkedin_logo.jpg" alt="LinkedIn" class="h-10 rounded-md">
+                        <span class="text-gray-400">2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Introdução à Inteligência Artificial</h3>
+                    <a href="https://media.licdn.com/dms/image/v2/D4D22AQFByvYWrRbBMQ/feedshare-shrink_1280/B4DZSuaSeRH0Ao-/0/1738092914863?e=1744243200&v=beta&t=7Cssjx42OKs1Zk9yEg0fFUXWobZbBN-a-1CkALcrV4o"
+                        target="_blank" class="certificate-link">
+                        View Certificate
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+
+
+                <div class="achievement-card">
+                    <div class="flex items-center justify-between mb-6">
+                        <img src="./assets/img/logo-dio.svg" alt="DIO" class="h-10 rounded-md">
+                        <span class="text-gray-400">2025</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Integração API</h3>
+                    <a href="https://hermes.dio.me/certificates/EDIKMHDY.pdf" target="_blank" class="certificate-link">
+                        View Certificate
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<style>
-    .gradient-text {
-        background: linear-gradient(to right, #4ade80, #3b82f6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #4ade80, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    .achievement-card {
-        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-        border: 1px solid rgba(59, 130, 246, 0.1);
-        border-radius: 1rem;
-        padding: 1.5rem;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
+        .achievement-card {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
 
-    .achievement-card::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-    .achievement-card:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-                   0 0 20px rgba(59, 130, 246, 0.1);
-    }
+        .achievement-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(59, 130, 246, 0.1);
+        }
 
-    .achievement-card:hover::before {
-        opacity: 1;
-    }
+        .achievement-card:hover::before {
+            opacity: 1;
+        }
 
-  
 
-    .certificate-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: #60a5fa;
-        font-weight: 500;
-        position: relative;
-        transition: color 0.3s ease;
-    }
 
-    .certificate-link::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background: #60a5fa;
-        transition: width 0.3s ease;
-    }
+        .certificate-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #60a5fa;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
 
-    .certificate-link:hover {
-        color: #93c5fd;
-    }
+        .certificate-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #60a5fa;
+            transition: width 0.3s ease;
+        }
 
-    .certificate-link:hover::after {
-        width: 100%;
-    }
-</style>
+        .certificate-link:hover {
+            color: #93c5fd;
+        }
+
+        .certificate-link:hover::after {
+            width: 100%;
+        }
+    </style>
     <section id="projetos" class="py-20 bg-gray-900">
         <div class="container mx-auto px-4 sm:px-6">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Featured Projects</h2>
@@ -491,7 +500,7 @@
                         <img src="./assets/img/portal_salaberga.png" alt="Project 1"
                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                             loading="lazy">
-                       
+
                     </div>
 
                     <div class="p-6">
@@ -534,7 +543,7 @@
                         <img src="./assets/img/sonar.PNG" alt="Project 2"
                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                             loading="lazy">
-                        
+
 
                     </div>
 
@@ -577,7 +586,7 @@
                         <img src="./assets/img/Capturar.PNG" alt="Project 1"
                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                             loading="lazy">
-                      
+
 
                     </div>
 
@@ -617,13 +626,59 @@
                 </article>
 
 
+
+                <article
+                    class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="./assets/img/storm.PNG" alt="Project 1"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                            loading="lazy">
+
+
+                    </div>
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">StormTrack </h3>
+                        <p class="text-gray-400 text-sm mb-4">Welcome to WeatherApp, a sleek and modern web application
+                            designed to provide users with real-time weather updates for any city. Powered by a weather
+                            data API, this project is built using React, accelerated with Vite, and styled with Tailwind
+                            CSS for a clean, responsive design.</p>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-4">
+                                <a href="https://github.com/mthfl/Felix-Restaurant" target="_blank"
+                                    class="text-green-500 hover:text-green-400 transition-colors">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <a href="https://mthfl.github.io/-StormTrack" target="_blank"
+                                class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
+                                Click here
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
                 <article
                     class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
                     <div class="relative aspect-video overflow-hidden">
                         <img src="./assets/img/projeto-5.PNG" alt="Project 1"
                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                             loading="lazy">
-                     
+
 
                     </div>
 
@@ -669,7 +724,7 @@
                         <img src="./assets/img/tela_game.png" alt="Project 2"
                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                             loading="lazy">
-                     
+
 
                     </div>
 
@@ -726,7 +781,7 @@
 
                 <div class="overflow-x-auto scrollbar-hide scroll-smooth" id="skills-container">
                     <div class="flex gap-12 min-w-max px-6 py-8">
-                     
+
                         <div
                             class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
                             <div class="w-full h-32 flex items-center justify-center">
@@ -740,7 +795,7 @@
                             </div>
                         </div>
 
-                    
+
                         <div
                             class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
                             <div class="w-full h-32 flex items-center justify-center">
@@ -754,7 +809,7 @@
                             </div>
                         </div>
 
-                  
+
                         <div
                             class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
                             <div class="w-full h-32 flex items-center justify-center">
@@ -768,7 +823,7 @@
                             </div>
                         </div>
 
-                     
+
                         <div
                             class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
                             <div class="w-full h-32 flex items-center justify-center">
@@ -795,7 +850,7 @@
                             </div>
                         </div>
 
-                   
+
                         <div
                             class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
                             <div class="w-full h-32 flex items-center justify-center">
@@ -824,7 +879,7 @@
 
 
 
-                
+
                         <div
                             class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
                             <div class="w-full h-32 flex items-center justify-center">
@@ -850,7 +905,7 @@
                                     lado do servidor</p>
                             </div>
                         </div>
-                    
+
                         <div
                             class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
                             <div class="w-full h-32 flex items-center justify-center">
@@ -864,7 +919,7 @@
                             </div>
                         </div>
 
-                     
+
                         <div
                             class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
                             <div class="w-full h-32 flex items-center justify-center">
@@ -903,14 +958,14 @@
 
         <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-blue-500"></div>
 
-        
+
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none"></div>
 
 
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
-             
+
                 <div class="text-center md:text-left space-y-2 sm:space-y-3 w-full md:w-auto">
                     <div class="flex items-center justify-center md:justify-start gap-2 sm:gap-3 flex-wrap">
                         <span
@@ -928,9 +983,9 @@
                     </p>
                 </div>
 
-             
+
                 <div class="flex flex-col items-center md:items-end gap-4 sm:gap-6 w-full md:w-auto">
-                
+
                     <div class="flex items-center justify-center gap-4 sm:gap-6 md:gap-8">
                         <a href="https://github.com/mthfl" target="_blank"
                             class="group relative text-xl sm:text-2xl text-gray-300 hover:text-green-400 transition-all duration-300">
@@ -952,7 +1007,7 @@
                         </a>
                     </div>
 
-                    
+
                     <div class="text-xs sm:text-sm text-gray-400 text-center md:text-right">
                         <p class="font-light">Desenvolvido por Matheus Felix</p>
                         <a href="mailto:matheus.dev91@gmail.com"
@@ -973,7 +1028,7 @@
             if (isMobile) {
                 skillCards.forEach(card => {
                     card.addEventListener('click', function () {
-                     
+
                         skillCards.forEach(c => {
                             if (c !== card) {
                                 c.querySelector('div:last-child').classList.remove('opacity-100');
@@ -981,7 +1036,7 @@
                             }
                         });
 
-                      
+
                         const description = this.querySelector('div:last-child');
                         if (description.classList.contains('opacity-0')) {
                             description.classList.remove('opacity-0');
@@ -1057,7 +1112,7 @@
 
             container.addEventListener('scroll', updateIndicators);
 
-          
+
             let isDown = false;
             let startX;
             let scrollLeft;
@@ -1094,24 +1149,24 @@
             const mobileMenuBackdrop = document.getElementById("mobile-menu-backdrop");
             const menuLinks = document.querySelectorAll(".menu-link");
 
-       
+
             function openMenu() {
                 mobileMenu.classList.add("active");
                 mobileMenuBackdrop.classList.remove("hidden");
             }
 
-   
+
             function closeMobileMenu() {
                 mobileMenu.classList.remove("active");
                 mobileMenuBackdrop.classList.add("hidden");
             }
 
-   
+
             menuToggle.addEventListener("click", openMenu);
             closeMenu.addEventListener("click", closeMobileMenu);
             mobileMenuBackdrop.addEventListener("click", closeMobileMenu);
 
-         
+
             menuLinks.forEach(link => {
                 link.addEventListener("click", (e) => {
                     e.preventDefault();
