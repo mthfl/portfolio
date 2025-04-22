@@ -1,330 +1,205 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Matheus</title>
+    <title>Matheus Felix | Front-End Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="icon" type="image/svg+xml" href="./assets/img/icon.svg">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/main.js"></script>
     <style>
-
-    </style>
-</head>
-
-<body class="bg-gray-900 text-white overflow-x-hidden cursor pointer">
-
-    <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md ">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex justify-between items-center">
-
-                <div class="flex items-center">
-                    <svg width="40" height="40" viewBox="0 0 100 100"
-                        class="transform hover:scale-105 transition-transform duration-500">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#4ade80" />
-                                <stop offset="100%" style="stop-color:#2563eb" />
-                            </linearGradient>
-                            <filter id="glow">
-                                <feGaussianBlur stdDeviation="2" result="coloredBlur" />
-                                <feMerge>
-                                    <feMergeNode in="coloredBlur" />
-                                    <feMergeNode in="SourceGraphic" />
-                                </feMerge>
-                            </filter>
-                        </defs>
-                        <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="url(#logoGradient)"
-                            filter="url(#glow)" />
-                        <path d="M30 65 L30 35 L50 55 L70 35 L70 65" stroke="white" stroke-width="4" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2.5s"
-                                fill="freeze" />
-                        </path>
-                        <circle cx="30" cy="35" r="2" fill="white" class="animate-pulse" />
-                        <circle cx="70" cy="35" r="2" fill="white" class="animate-pulse" />
-                    </svg>
-                </div>
-
-
-                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="#inicio"
-                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Home</a>
-                    <a href="#about"
-                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">About
-                    </a>
-                    <a href="#achievements"
-                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Achievements</a>
-                    <a href="#projetos"
-                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Projects</a>
-                    <a href="#skills"
-                        class="text-gray-200 hover:text-green-400 transition-all duration-300 font-medium text-sm lg:text-base">Skills</a>
-                </div>
-
-
-                <button id="menu-toggle"
-                    class="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors focus:outline-none text-gray-200">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-
-    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
-
-
-    <div id="mobile-menu"
-        class="fixed top-0 right-0 h-full w-full sm:w-80 bg-gray-900 z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl">
-        <div class="flex flex-col h-full p-6">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-xl font-bold bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
-                    Menu</h2>
-                <button id="close-menu" class="p-2 hover:bg-gray-800 rounded-lg transition-colors text-gray-200">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </button>
-            </div>
-            <div class="flex flex-col space-y-6">
-                <a href="#inicio"
-                    class="text-gray-200 text-lg hover:text-green-400 transition-all duration-300 font-medium">Home</a>
-                <a href="#about"
-                    class="text-gray-200 text-lg hover:text-green-400 transition-all duration-300 font-medium">About
-                </a>
-                <a href="#achievements"
-                    class="text-gray-200 text-lg hover:text-green-400 transition-all duration-300 font-medium">Achievements</a>
-                <a href="#projetos"
-                    class="text-gray-200 text-lg hover:text-green-400 transition-all duration-300 font-medium">Projects</a>
-                <a href="#skills"
-                    class="text-gray-200 text-lg hover:text-green-400 transition-all duration-300 font-medium">Skills</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMenu = document.getElementById('close-menu');
-        const menuBackdrop = document.getElementById('mobile-menu-backdrop');
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-
-
-        function closeMobileMenu() {
-            mobileMenu.classList.add('translate-x-full');
-            mobileMenu.classList.remove('translate-x-0');
-            menuBackdrop.classList.add('hidden');
+        /* Light/Dark Mode */
+        :root {
+            --bg-primary-dark: #111827;
+            --bg-secondary-dark: #1f2937;
+            --text-primary-dark: #ffffff;
+            --text-secondary-dark: #9ca3af;
+            
+            --bg-primary-light: #ffffff;
+            --bg-secondary-light: #f3f4f6;
+            --text-primary-light: #111827;
+            --text-secondary-light: #4b5563;
         }
 
+        .dark {
+            --bg-primary: var(--bg-primary-dark);
+            --bg-secondary: var(--bg-secondary-dark);
+            --text-primary: var(--text-primary-dark);
+            --text-secondary: var(--text-secondary-dark);
+        }
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('translate-x-full');
-            mobileMenu.classList.toggle('translate-x-0');
-            menuBackdrop.classList.toggle('hidden');
-        });
+        .light {
+            --bg-primary: var(--bg-primary-light);
+            --bg-secondary: var(--bg-secondary-light);
+            --text-primary: var(--text-primary-light);
+            --text-secondary: var(--text-secondary-light);
+        }
 
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-        closeMenu.addEventListener('click', closeMobileMenu);
+        .bg-gray-900 {
+            background-color: var(--bg-primary);
+        }
 
-        menuBackdrop.addEventListener('click', closeMobileMenu);
+        .bg-gray-800 {
+            background-color: var(--bg-secondary);
+        }
 
+        .text-white {
+            color: var(--text-primary);
+        }
 
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
-        });
-    </script>
-    <section id="inicio"
-        class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div class="container mx-auto px-6 py-20 text-center">
+        .text-gray-300, .text-gray-400 {
+            color: var(--text-secondary);
+        }
 
-            <div class="relative mx-auto w-56 h-56 sm:w-72 sm:h-72 mb-16 group">
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
 
-                <div
-                    class="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 via-blue-500 to-green-400 blur-xl opacity-75 animate-gradient-xy group-hover:opacity-100 transition-opacity duration-300">
-                </div>
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
 
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 4px;
+        }
 
-                <div
-                    class="relative w-full h-full rounded-full p-1 bg-gradient-to-r from-green-400 to-blue-500 rotate-3 hover:rotate-6 transition-transform duration-300">
-                    <div class="w-full h-full rounded-full overflow-hidden bg-gray-900 p-2">
-                        <img src="./assets/img/foto.jpg" alt="Matheus Felix"
-                            class="w-full h-full object-cover rounded-full shadow-2xl transition-transform duration-300 group-hover:scale-105">
-                    </div>
-                </div>
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
 
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #4ade80, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
 
-                <div class="absolute -top-4 -right-4 w-8 h-8 bg-green-400 rounded-full blur-sm animate-pulse"></div>
-                <div class="absolute -bottom-4 -left-4 w-8 h-8 bg-blue-500 rounded-full blur-sm animate-pulse"></div>
-            </div>
+        /* Circuit board background */
+        .circuit-bg {
+            background-color: var(--bg-primary);
+            background-image: 
+                radial-gradient(rgba(74, 222, 128, 0.1) 2px, transparent 2px),
+                linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px, 20px 20px, 20px 20px;
+            background-position: center;
+        }
 
-            <div class="floating">
-                <h2 class="text-5xl md:text-7xl font-bold mb-6">
-                    Hi, I'm <span class="gradient-text">Matheus</span>
-                </h2>
-            </div>
+        /* Mobile menu animation */
+        #mobile-menu {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            background-color: var(--bg-primary);
+        }
 
-            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
-                Front-End Developer and UX/UI specialist crafting elegant and functional digital solutions.
-            </p>
+        /* Section transitions */
+        section {
+            transition: background-color 0.5s ease;
+        }
 
+        /* Card hover effects */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#projetos"
-                    class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg bg-gradient-to-r from-green-500 to-blue-500 text-white transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                    View My Work
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
-                        fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </a>
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
 
-                <a href="./assets/img/curriculo-matheus_felix.pdf" target="_blank"
-                    class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg border-2 border-green-500 text-white transition-all duration-300 hover:bg-green-500/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                    Download Resume
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
-                        fill="currentColor">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
+        /* Skill card */
+        .skill-card {
+            transition: all 0.3s ease;
+            min-width: 140px;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            border: 1px solid rgba(75, 85, 99, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
 
-    <section id="about" class="py-12 sm:py-20 bg-gray-800" aria-labelledby="about-title">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 id="about-title"
-                class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent animate-fade-in">
-                About Me
-            </h2>
+        .light .skill-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
 
-            <div class="max-w-4xl mx-auto">
-                <div
-                    class="bg-gray-900 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
-                    <div class="flex flex-col items-center gap-8">
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: rgba(74, 222, 128, 0.3);
+        }
 
-                        <div class="w-full space-y-6">
-                            <div class="text-center animate-fade-in">
-                                <h3 class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent mb-4">
-                                    Front-End Developer & AI Specialist
-                                </h3>
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(74, 222, 128, 0.05), rgba(59, 130, 246, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-                                <div class="grid grid-cols-3 gap-4 mb-6">
-                                    <div class="p-4 bg-gray-800 rounded-lg">
-                                        <span class="text-xs sm:text-sm text-gray-400">Years of Experience</span>
-                                        <span class="block text-2xl sm:text-3xl font-bold text-blue-400 typewriter"
-                                            data-value="4">0</span>
-                                    </div>
-                                    <div class="p-4 bg-gray-800 rounded-lg">
-                                        <span class="text-xs sm:text-sm text-gray-400">Projects Completed</span>
-                                        <span class="block text-2xl sm:text-3xl font-bold text-blue-400 typewriter"
-                                            data-value="15">0</span>
-                                    </div>
-                                    <div class="p-4 bg-gray-800 rounded-lg">
-                                        <span class="text-xs sm:text-sm text-gray-400">Satisfaction Rate</span>
-                                        <span class="block text-2xl sm:text-3xl font-bold text-blue-400 typewriter"
-                                            data-type="satisfaction" data-value="100">0</span>
-                                    </div>
-                                </div>
+        .skill-card:hover::before {
+            opacity: 1;
+        }
 
-                                <div class="space-y-4 text-gray-300">
-                                    <p class="text-base sm:text-lg leading-relaxed">
-                                        Hi! I'm <span class="text-blue-400 font-medium">Matheus Felix</span>,
-                                        a Front-End Developer passionate about creating exceptional digital experiences
-                                        that combine intuitive design with cutting-edge technology.
-                                    </p>
-                                    <p class="text-base sm:text-lg leading-relaxed">
-                                        As a specialist in <span class="text-blue-400">UX/UI</span> and
-                                        <span class="text-blue-400">Artificial Intelligence</span>,
-                                        my goal is to develop innovative solutions that not only meet user needs
-                                        but exceed their expectations. I work with modern technologies like
-                                        <span class="text-blue-400">Tailwind</span> and
-                                        <span class="text-blue-400">JavaScript</span>, always seeking to integrate
-                                        best development practices with intelligent solutions.
-                                    </p>
-                                </div>
-                            </div>
+        .skill-icon {
+            transition: transform 0.3s ease;
+        }
 
-                            <div class="flex justify-center gap-4 mt-6">
-                                <a href="https://www.linkedin.com/in/matheus-fl" target="_blank"
-                                    class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-green-400 to-blue-600 text-white rounded-lg font-medium hover:scale-105 transition-transform duration-300 text-sm sm:text-base"
-                                    aria-label="Access LinkedIn">
-                                    Access LinkedIn
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        .skill-card:hover .skill-icon {
+            transform: scale(1.1);
+        }
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const typewriters = document.querySelectorAll('.typewriter');
-            const aboutSection = document.getElementById('about');
+        /* Scrollbar for skills container */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-            const animateValue = (element, start, end, duration) => {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    const current = Math.floor(progress * (end - start) + start);
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
 
-                    if (element.getAttribute('data-type') === 'satisfaction') {
-                        element.textContent = `${current}%`;
-                    } else {
-                        element.textContent = current;
-                    }
+        /* Animated underline */
+        .nav-link {
+            position: relative;
+            padding-bottom: 2px;
+        }
 
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-                window.requestAnimationFrame(step);
-            };
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right, #4ade80, #3b82f6);
+            transition: width 0.3s ease;
+        }
 
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
-            const animateAllCounters = () => {
-                typewriters.forEach(element => {
-                    const finalValue = parseInt(element.getAttribute('data-value'));
-                    animateValue(element, 0, finalValue, 3000);
-                });
-            };
-
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-
-                        animateAllCounters();
-
-                        observer.unobserve(aboutSection);
-                    }
-                });
-            }, {
-                threshold: 0.3
-            });
-            // Observa a seção About
-            observer.observe(aboutSection);
-        });
-    </script>
-
-    <style>
-        .animate-fade-in {
+        /* Fade in animation */
+        .fade-in {
             animation: fadeIn 0.8s ease-in;
         }
 
@@ -333,137 +208,1124 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
+        /* Section divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(156, 163, 175, 0.2), transparent);
+            margin: 2rem 0;
+        }
+
+        /* Project card */
+        .project-card {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(75, 85, 99, 0.2);
+            position: relative;
+        }
+
+        .light .project-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: rgba(74, 222, 128, 0.3);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(74, 222, 128, 0.05), rgba(59, 130, 246, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Certificate card */
+        .certificate-card {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(75, 85, 99, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .light .certificate-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: rgba(74, 222, 128, 0.3);
+        }
+
+        .certificate-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(74, 222, 128, 0.05), rgba(59, 130, 246, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .certificate-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Certificate link */
+        .certificate-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #60a5fa;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .certificate-link:hover {
+            color: #93c5fd;
+            transform: translateX(5px);
+        }
+
+        /* Button styles */
+        .primary-button {
+            background: linear-gradient(to right, #4ade80, #3b82f6);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .primary-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: rotate(45deg) translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .primary-button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .primary-button:hover::after {
+            transform: rotate(45deg) translateX(100%);
+        }
+
+        .secondary-button {
+            background: transparent;
+            color: var(--text-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            border: 1px solid #4ade80;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secondary-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .secondary-button:hover {
+            background: rgba(74, 222, 128, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .secondary-button:hover::after {
+            left: 100%;
+        }
+
+        /* Container max widths for better readability */
+        .container-narrow {
+            max-width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container-medium {
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container-wide {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Improved mobile menu */
+        .mobile-menu-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .light .mobile-menu-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding-left: 0.5rem;
+        }
+
+        .light .mobile-menu-item:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Project image container */
+        .project-image-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+
+        .project-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        /* Improved skill cards for mobile */
+        @media (max-width: 768px) {
+            .skill-card {
+                min-width: 110px;
+                padding: 0.75rem;
+            }
+            
+            .skill-card img {
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        /* Better spacing for mobile */
+        @media (max-width: 640px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .project-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .profile-image-container {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Improved project grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Better certificate cards */
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Improved footer layout */
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .footer-links {
+                align-items: flex-end;
+            }
+        }
+
+        /* Better touch targets */
+        button, a {
+            touch-action: manipulation;
+        }
+
+        /* Improved active states */
+        .active-nav-link {
+            color: var(--text-primary);
+        }
+
+        .active-nav-link::after {
+            width: 100%;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Better section spacing */
+        section {
+            padding: 5rem 1rem;
+        }
+
+        @media (min-width: 640px) {
+            section {
+                padding: 6rem 1.5rem;
+            }
+        }
+
+        /* Improved hero section */
+        .hero-section {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-section {
+                padding-top: 10rem;
+                padding-bottom: 10rem;
+            }
+        }
+
+        /* Enhanced header */
+        .enhanced-header {
+            backdrop-filter: blur(8px);
+            background-color: rgba(17, 24, 39, 0.85);
+            border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .light .enhanced-header {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Enhanced profile image */
+        .profile-image-container {
+            position: relative;
+        }
+
+        .profile-image-glow {
+            position: absolute;
+            inset: -5px;
+            background: linear-gradient(45deg, #4ade80, #3b82f6);
+            border-radius: 50%;
+            filter: blur(15px);
+            opacity: 0.5;
+            z-index: -1;
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.3;
+                filter: blur(15px);
+            }
+            100% {
+                opacity: 0.6;
+                filter: blur(20px);
+            }
+        }
+
+        /* Enhanced about cards */
+        .about-card {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background-color: var(--bg-primary);
+        }
+
+        .light .about-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+
+        .about-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(74, 222, 128, 0.05), transparent);
+            transform: rotate(45deg);
+            z-index: -1;
+            transition: transform 0.6s ease;
+        }
+
+        .about-card:hover::after {
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        /* Enhanced certificate logo */
+        .certificate-logo {
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover .certificate-logo {
+            transform: scale(1.05);
+        }
+
+        /* Logo animation */
+        .logo-animation {
+            transition: transform 0.3s ease;
+        }
+
+        .logo-animation:hover {
+            transform: scale(1.05);
+        }
+
+        /* Enhanced mobile menu backdrop */
+        .menu-backdrop {
+            backdrop-filter: blur(5px);
+            transition: opacity 0.3s ease;
+        }
+
+        /* Enhanced skills section */
+        .skills-container {
+            position: relative;
+            overflow-x: auto;
+            padding: 1rem 0;
+        }
+
+        .skills-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 50px;
+            background: linear-gradient(to right, transparent, var(--bg-primary));
+            pointer-events: none;
+        }
+
+        /* Enhanced project tags */
+        .project-tag {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-tag:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced project links */
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #60a5fa;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #93c5fd;
+            transform: translateX(3px);
+        }
+
+        /* Enhanced footer */
+        .enhanced-footer {
+            background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+            border-top: 1px solid rgba(75, 85, 99, 0.2);
+        }
+
+        .light .enhanced-footer {
+            border-top: 1px solid rgba(229, 231, 235, 0.8);
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            color: #4ade80;
+        }
+
+        /* Theme toggle */
+        .theme-toggle {
+            position: relative;
+            width: 50px;
+            height: 24px;
+            border-radius: 12px;
+            background-color: #4b5563;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            padding: 0 4px;
+        }
+
+        .theme-toggle-circle {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: white;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111827;
+            font-size: 10px;
+        }
+
+        .dark .theme-toggle-circle {
+            transform: translateX(26px);
+        }
+
+        .light .theme-toggle-circle {
+            transform: translateX(0);
+        }
+
+        .dark .theme-toggle {
+            background-color: #4b5563;
+        }
+
+        .light .theme-toggle {
+            background-color: #d1d5db;
+        }
+
+        /* Theme toggle icons */
+        .theme-toggle-icon {
+            position: absolute;
+            font-size: 12px;
+        }
+
+        .theme-toggle-icon.sun {
+            color: #f59e0b;
+            right: 6px;
+        }
+
+        .theme-toggle-icon.moon {
+            color: #f3f4f6;
+            left: 6px;
+        }
+
+        .dark .theme-toggle-icon.sun {
+            display: block;
+        }
+
+        .dark .theme-toggle-icon.moon {
+            display: none;
+        }
+
+        .light .theme-toggle-icon.sun {
+            display: none;
+        }
+
+        .light .theme-toggle-icon.moon {
+            display: block;
+        }
+
+        /* Language selector */
+        .language-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: var(--bg-secondary);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 0.5rem 0;
+            min-width: 120px;
+            z-index: 50;
+            display: none;
+        }
+
+        .language-selector:hover .language-dropdown {
+            display: block;
+        }
+
+        .language-option {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .language-option:hover {
+            background-color: rgba(75, 85, 99, 0.1);
+        }
+
+        /* Particles container */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        /* Light mode specific styles */
+        .light .text-blue-400 {
+            color: #3b82f6;
+        }
+
+        .light .mobile-menu {
+            border-left: 1px solid rgba(229, 231, 235, 0.8);
+        }
+
+        .light .nav-link, .light .mobile-menu-item {
+            color: #4b5563;
+        }
+
+        .light .nav-link:hover, .light .mobile-menu-item:hover {
+            color: #111827;
+        }
+
+        /* Theme toggle icons */
+        .theme-toggle-icon {
+            color: #f59e0b;
+            font-size: 12px;
+        }
+
+        .theme-toggle-icon.moon {
+            color: #f3f4f6;
+        }
+
+        /* Mobile skills grid improvements */
+        @media (max-width: 640px) {
+            .mobile-skills-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+            }
+
+            .mobile-skill-item {
+                background-color: var(--bg-secondary);
+                border-radius: 0.5rem;
+                padding: 0.75rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+                border: 1px solid rgba(75, 85, 99, 0.2);
+            }
+
+            .light .mobile-skill-item {
+                border: 1px solid rgba(229, 231, 235, 0.8);
+            }
+
+            .mobile-skill-item img {
+                width: 32px;
+                height: 32px;
+                margin-bottom: 0.5rem;
+            }
+
+            .mobile-skill-item span {
+                font-size: 0.7rem;
+                text-align: center;
+            }
+        }
+
+        /* About section mobile improvements */
+        @media (max-width: 640px) {
+            .about-content-mobile {
+                padding: 0.5rem;
+            }
+            
+            .about-text-mobile {
+                background-color: rgba(31, 41, 55, 0.5);
+                border-radius: 1rem;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                border: 1px solid rgba(75, 85, 99, 0.3);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+            
+            .light .about-text-mobile {
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(229, 231, 235, 0.8);
+            }
+            
+            .about-cards-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            
+            .about-card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .about-button-mobile {
+                margin-top: 1.5rem;
+                text-align: center;
+            }
+            
+            .about-button-mobile .primary-button {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+        }
+
+        /* Enhanced About Me section for mobile */
+        @media (max-width: 640px) {
+            .about-content-mobile {
+                padding: 0.5rem;
+            }
+            
+            .about-text-mobile {
+                background-color: rgba(31, 41, 55, 0.5);
+                border-radius: 1rem;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                border: 1px solid rgba(75, 85, 99, 0.3);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            }
+            
+            .light .about-text-mobile {
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(229, 231, 235, 0.8);
+            }
+            
+            .about-cards-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            
+            .about-card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .about-button-mobile {
+                margin-top: 1.5rem;
+                text-align: center;
+            }
+            
+            .about-button-mobile .primary-button {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+        }
     </style>
+</head>
 
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 enhanced-header">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <svg width="40" height="40" viewBox="0 0 100 100" class="logo-animation">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4ade80" />
+                                <stop offset="100%" style="stop-color:#3b82f6" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="url(#logoGradient)" />
+                        <path d="M30 65 L30 35 L50 55 L70 35 L70 65" stroke="white" stroke-width="4" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2.5s" fill="freeze" />
+                        </path>
+                    </svg>
+                    <span class="ml-2 text-lg font-semibold hidden sm:block">Matheus Felix</span>
+                </div>
 
-    <section id="achievements" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Certifications & Achievements</h2>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Home" data-pt="Início">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="About" data-pt="Sobre">About</a>
+                    <a href="#certificates" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Certificates" data-pt="Certificados">Certificates</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Projects" data-pt="Projetos">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Skills" data-pt="Habilidades">Skills</a>
+                    
+                    <!-- Theme Toggle -->
+                    <div class="theme-toggle" id="theme-toggle">
+                        <div class="theme-toggle-circle"></div>
+                        <i class="fas fa-sun theme-toggle-icon sun"></i>
+                        <i class="fas fa-moon theme-toggle-icon moon"></i>
+                    </div>
+                    
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-language">EN</span>
+                        </button>
+                        <div class="language-dropdown">
+                            <div class="language-option" data-lang="en">
+                                <span>English</span>
+                            </div>
+                            <div class="language-option" data-lang="pt">
+                                <span>Português</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Theme Toggle Mobile -->
+                    <div class="theme-toggle" id="theme-toggle-mobile">
+                        <div class="theme-toggle-circle"></div>
+                        <i class="fas fa-sun theme-toggle-icon sun"></i>
+                        <i class="fas fa-moon theme-toggle-icon moon"></i>
+                    </div>
+                    
+                    <!-- Language Selector Mobile -->
+                    <div class="language-selector">
+                        <button class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-globe"></i>
+                        </button>
+                        <div class="language-dropdown">
+                            <div class="language-option" data-lang="en">
+                                <span>English</span>
+                            </div>
+                            <div class="language-option" data-lang="pt">
+                                <span>Português</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="menu-toggle" class="p-2 rounded-lg hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-                <div class="achievement-card">
+    <!-- Mobile Menu Backdrop -->
+    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden menu-backdrop"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-full sm:w-80 bg-gray-900 z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl border-l border-gray-800">
+        <div class="flex flex-col h-full p-6">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-xl font-bold gradient-text">Menu</h2>
+                <button id="close-menu" class="p-2 hover:bg-gray-800 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col">
+                <a href="#home" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Home" data-pt="Início">Home</a>
+                <a href="#about" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="About" data-pt="Sobre">About</a>
+                <a href="#certificates" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Certificates" data-pt="Certificados">Certificates</a>
+                <a href="#projects" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Projects" data-pt="Projetos">Projects</a>
+                <a href="#skills" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Skills" data-pt="Habilidades">Skills</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 circuit-bg">
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+        <div class="container mx-auto px-6 py-20 text-center relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 hero-content">
+                <!-- Profile image moved above text on mobile -->
+                <div class="md:order-2 md:w-1/3">
+                    <div class="profile-image-container relative w-56 h-56 sm:w-64 sm:h-64 mx-auto">
+                        <div class="profile-image-glow"></div>
+                        <div class="relative w-full h-full rounded-full p-1 bg-gradient-to-r from-green-400 to-blue-500">
+                            <div class="w-full h-full rounded-full overflow-hidden bg-gray-900 p-2">
+                                <img src="./assets/img/foto.jpg" alt="Matheus Felix" class="w-full h-full object-cover rounded-full shadow-2xl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:order-1 text-center md:text-left md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                        <span data-en="Hi, I'm" data-pt="Olá, eu sou">Hi, I'm</span> <span class="gradient-text">Matheus</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 max-w-lg mx-auto md:mx-0" data-en="Front-End Developer and UX/UI specialist crafting elegant and functional digital solutions." data-pt="Desenvolvedor Front-End e especialista em UX/UI criando soluções digitais elegantes e funcionais.">
+                        Front-End Developer and UX/UI specialist crafting elegant and functional digital solutions.
+                    </p>
+                    <div class="flex flex-wrap gap-4 hero-buttons">
+                        <a href="#projects" class="primary-button">
+                            <span data-en="View My Work" data-pt="Ver Meus Projetos">View My Work</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="./assets/img/curriculo-matheus_felix.pdf" target="_blank" class="secondary-button">
+                            <span data-en="Download Resume" data-pt="Baixar Currículo">Download Resume</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container-medium px-6 mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 gradient-text" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center about-grid about-content-mobile">
+    <div class="space-y-6 about-text-mobile">
+        <h3 class="text-2xl font-semibold text-white mb-4" data-en="Front-End Developer & AI Specialist" data-pt="Desenvolvedor Front-End & Especialista em IA">Front-End Developer & AI Specialist</h3>
+        <div class="space-y-4 text-gray-300">
+            <p class="leading-relaxed" data-en="Hi! I'm Matheus Felix, a Front-End Developer passionate about creating exceptional digital experiences that combine intuitive design with cutting-edge technology." data-pt="Olá! Eu sou Matheus Felix, um Desenvolvedor Front-End apaixonado por criar experiências digitais excepcionais que combinam design intuitivo com tecnologia de ponta.">
+                Hi! I'm <span class="text-blue-400 font-medium">Matheus Felix</span>,
+                a Front-End Developer passionate about creating exceptional digital experiences
+                that combine intuitive design with cutting-edge technology.
+            </p>
+            <p class="leading-relaxed" data-en="As a specialist in UX/UI and Artificial Intelligence, my goal is to develop innovative solutions that not only meet user needs but exceed their expectations. I work with modern technologies like Tailwind and JavaScript, always seeking to integrate best development practices with intelligent solutions." data-pt="Como especialista em UX/UI e Inteligência Artificial, meu objetivo é desenvolver soluções inovadoras que não apenas atendam às necessidades dos usuários, mas superem suas expectativas. Trabalho com tecnologias modernas como Tailwind e JavaScript, sempre buscando integrar as melhores práticas de desenvolvimento com soluções inteligentes.">
+                As a specialist in <span class="text-blue-400">UX/UI</span> and
+                <span class="text-blue-400">Artificial Intelligence</span>,
+                my goal is to develop innovative solutions that not only meet user needs
+                but exceed their expectations. I work with modern technologies like
+                <span class="text-blue-400">Tailwind</span> and
+                <span class="text-blue-400">JavaScript</span>, always seeking to integrate
+                best development practices with intelligent solutions.
+            </p>
+        </div>
+    </div>
+    
+    <div class="about-cards-grid about-cards-mobile">
+        <div class="about-card bg-gray-900 rounded-xl p-6 card-hover">
+            <div class="text-blue-400 text-3xl font-bold mb-2">4+</div>
+            <div class="text-gray-400" data-en="Years of Experience" data-pt="Anos de Experiência">Years of Experience</div>
+        </div>
+        <div class="about-card bg-gray-900 rounded-xl p-6 card-hover">
+            <div class="text-blue-400 text-3xl font-bold mb-2">15+</div>
+            <div class="text-gray-400" data-en="Projects Completed" data-pt="Projetos Concluídos">Projects Completed</div>
+        </div>
+        <div class="about-card bg-gray-900 rounded-xl p-6 card-hover">
+            <div class="text-blue-400 text-3xl font-bold mb-2">100%</div>
+            <div class="text-gray-400" data-en="Client Satisfaction" data-pt="Satisfação do Cliente">Client Satisfaction</div>
+        </div>
+        <div class="about-card bg-gray-900 rounded-xl p-6 card-hover">
+            <div class="text-blue-400 text-3xl font-bold mb-2">7+</div>
+            <div class="text-gray-400" data-en="Certifications" data-pt="Certificações">Certifications</div>
+        </div>
+    </div>
+    
+    <!-- LinkedIn button moved after cards on mobile -->
+    <div class="about-button-mobile md:hidden">
+        <a href="https://www.linkedin.com/in/matheus-fl" target="_blank" class="primary-button">
+            <span data-en="Connect on LinkedIn" data-pt="Conectar no LinkedIn">Connect on LinkedIn</span>
+            <i class="fab fa-linkedin ml-2"></i>
+        </a>
+    </div>
+    
+    <!-- Only visible on desktop -->
+    <div class="pt-4 hidden md:block">
+        <a href="https://www.linkedin.com/in/matheus-fl" target="_blank" class="primary-button">
+            <span data-en="Connect on LinkedIn" data-pt="Conectar no LinkedIn">Connect on LinkedIn</span>
+            <i class="fab fa-linkedin ml-2"></i>
+        </a>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-gray-800">
+        <div class="container-medium px-6 mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6 gradient-text" data-en="Certifications" data-pt="Certificações">Certifications</h2>
+            <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto" data-en="Professional certifications and achievements that demonstrate my expertise and continuous learning" data-pt="Certificações profissionais e conquistas que demonstram minha experiência e aprendizado contínuo">Professional certifications and achievements that demonstrate my expertise and continuous learning</p>
+
+            <div class="certificate-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card card-hover">
                     <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/google.jpg" alt="Udemy" class="h-10 rounded-md">
-                        <span class="text-gray-400">2025</span>
+                        <img src="./assets/img/google.jpg" alt="Google" class="h-10 rounded-md certificate-logo">
+                        <span class="text-gray-400 text-sm">2025</span>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Google UX Design</h3>
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/6SM7NEAJGBFX" target="_blank"
-                        class="certificate-link">
-                        View Certificate
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/6SM7NEAJGBFX" target="_blank" class="certificate-link">
+                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </a>
                 </div>
 
-                <div class="achievement-card">
+                <!-- Certificate 2 -->
+                <div class="certificate-card card-hover">
                     <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/google.jpg" alt="Udemy" class="h-10 rounded-md">
-                        <span class="text-gray-400">2025</span>
+                        <img src="./assets/img/google.jpg" alt="Google" class="h-10 rounded-md certificate-logo">
+                        <span class="text-gray-400 text-sm">2025</span>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Google IA produtiva</h3>
-                    <a href="https://postimg.cc/s11g6p8n" target="_blank"
-                        class="certificate-link">
-                        View Certificate
+                    <a href="https://postimg.cc/s11g6p8n" target="_blank" class="certificate-link">
+                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </a>
                 </div>
 
-
-                
-                <div class="achievement-card">
+                <!-- Certificate 3 -->
+                <div class="certificate-card card-hover">
                     <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/ie_university_logo.jpg" alt="Udemy" class="h-10 rounded-md">
-                        <span class="text-gray-400">2025</span>
+                        <img src="./assets/img/ie_university_logo.jpg" alt="IE University" class="h-10 rounded-md certificate-logo">
+                        <span class="text-gray-400 text-sm">2025</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Introdução à Ciência de Dados </h3>
-                    <a href="https://postimg.cc/ZvLHvGSc" target="_blank"
-                        class="certificate-link">
-                        View Certificate
+                    <h3 class="text-xl font-semibold text-white mb-3">Introdução à Ciência de Dados</h3>
+                    <a href="https://postimg.cc/ZvLHvGSc" target="_blank" class="certificate-link">
+                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </a>
                 </div>
 
-                <div class="achievement-card">
+                <!-- Certificate 4 -->
+                <div class="certificate-card card-hover">
                     <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/udemy_logo.jpg" alt="Udemy" class="h-10 rounded-md">
-                        <span class="text-gray-400">2025</span>
+                        <img src="./assets/img/udemy_logo.jpg" alt="Udemy" class="h-10 rounded-md certificate-logo">
+                        <span class="text-gray-400 text-sm">2025</span>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">React</h3>
-                    <a href="https://www.udemy.com/certificate/UC-774cf64b-d149-4b7b-aa59-95506289d1d9" target="_blank"
-                        class="certificate-link">
-                        View Certificate
+                    <a href="https://www.udemy.com/certificate/UC-774cf64b-d149-4b7b-aa59-95506289d1d9" target="_blank" class="certificate-link">
+                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </a>
                 </div>
 
-
-                <div class="achievement-card">
+                <!-- Certificate 5 -->
+                <div class="certificate-card card-hover">
                     <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/aluracursos_logo.jpg" alt="Alura" class="h-10 rounded-md">
-                        <span class="text-gray-400">2025</span>
+                        <img src="./assets/img/aluracursos_logo.jpg" alt="Alura" class="h-10 rounded-md certificate-logo">
+                        <span class="text-gray-400 text-sm">2025</span>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Imersão Front-End 2ª Edição</h3>
-                    <a href="https://cursos.alura.com.br/immersion/certificate/121af83a-9fdc-406b-8abf-54e404e57227?lang=pt_BR"
-                        target="_blank" class="certificate-link">
-                        View Certificate
+                    <a href="https://cursos.alura.com.br/immersion/certificate/121af83a-9fdc-406b-8abf-54e404e57227?lang=pt_BR" target="_blank" class="certificate-link">
+                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </a>
                 </div>
 
-
-                <div class="achievement-card">
+                <!-- Certificate 6 -->
+                <div class="certificate-card card-hover">
                     <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/linkedin_logo.jpg" alt="LinkedIn" class="h-10 rounded-md">
-                        <span class="text-gray-400">2025</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Introdução à Inteligência Artificial</h3>
-                    <a href="https://media.licdn.com/dms/image/v2/D4D22AQFByvYWrRbBMQ/feedshare-shrink_1280/B4DZSuaSeRH0Ao-/0/1738092914863?e=1744243200&v=beta&t=7Cssjx42OKs1Zk9yEg0fFUXWobZbBN-a-1CkALcrV4o"
-                        target="_blank" class="certificate-link">
-                        View Certificate
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
-
-
-
-
-
-
-                <div class="achievement-card">
-                    <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/logo-dio.svg" alt="DIO" class="h-10 rounded-md">
-                        <span class="text-gray-400">2025</span>
+                        <img src="./assets/img/logo-dio.svg" alt="DIO" class="h-10 rounded-md certificate-logo">
+                        <span class="text-gray-400 text-sm">2025</span>
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Integração API</h3>
                     <a href="https://hermes.dio.me/certificates/EDIKMHDY.pdf" target="_blank" class="certificate-link">
-                        View Certificate
+                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </a>
                 </div>
@@ -471,138 +1333,54 @@
         </div>
     </section>
 
-    <style>
-        .gradient-text {
-            background: linear-gradient(to right, #4ade80, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .achievement-card {
-            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-            border: 1px solid rgba(59, 130, 246, 0.1);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .achievement-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-                0 0 20px rgba(59, 130, 246, 0.1);
-        }
-
-        .achievement-card:hover::before {
-            opacity: 1;
-        }
-
-
-
-        .certificate-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #60a5fa;
-            font-weight: 500;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .certificate-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: #60a5fa;
-            transition: width 0.3s ease;
-        }
-
-        .certificate-link:hover {
-            color: #93c5fd;
-        }
-
-        .certificate-link:hover::after {
-            width: 100%;
-        }
-    </style>
-    <section id="projetos" class="py-20 bg-gray-900">
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900">
         <div class="container mx-auto px-4 sm:px-6">
-            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Featured Projects</h2>
+            <h2 class="text-3xl font-bold text-center mb-6 gradient-text" data-en="Featured Projects" data-pt="Projetos em Destaque">Featured Projects</h2>
+            <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto" data-en="A selection of my recent work showcasing my skills in front-end development, UX/UI design, and problem-solving." data-pt="Uma seleção dos meus trabalhos recentes que demonstram minhas habilidades em desenvolvimento front-end, design UX/UI e resolução de problemas.">A selection of my recent work showcasing my skills in front-end development, UX/UI design, and problem-solving.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <article
-                    class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="relative aspect-video overflow-hidden">
-                        <img src="./assets/img/portal_salaberga.png" alt="Project 1"
-                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            <div class="projects-grid">
+                <!-- Project 1: School Portal -->
+                <article class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/img/portal_salaberga.png" alt="School Portal"
+                            class="project-image"
                             loading="lazy">
-
                     </div>
 
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-white">School Portal</h3>
-                        <p class="text-gray-400 text-sm mb-4">This system provides an efficient platform for managing
+                        <p class="text-gray-400 text-sm mb-4" data-en="This system provides an efficient platform for managing school operations, including Registration, Login, and various subsystems. It offers access to News, Location, Partnerships, History, and Events." data-pt="Este sistema fornece uma plataforma eficiente para gerenciar operações escolares, incluindo Registro, Login e vários subsistemas. Oferece acesso a Notícias, Localização, Parcerias, História e Eventos.">This system provides an efficient platform for managing
                             school operations, including Registration, Login, and various subsystems. It offers access
-                            to News, Location, Partnerships, History, and Events. Developed by Matheus Felix and his
-                            team, it enhances communication and organization within the school community.</p>
+                            to News, Location, Partnerships, History, and Events.</p>
 
                         <div class="flex justify-between items-center">
                             <div class="flex gap-4">
                                 <a href="https://github.com/mthfl/Portal-Stgm" target="_blank"
                                     class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
+                                    <i class="fab fa-github text-xl"></i>
                                 </a>
                             </div>
 
                             <a href="https://salaberga.com" target="_blank"
                                 class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
-                                Click here
+                                <span data-en="View Live" data-pt="Ver Online">View Live</span>
                             </a>
                         </div>
                     </div>
                 </article>
 
-                <article
-                    class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="relative aspect-video overflow-hidden">
-                        <img src="./assets/img/sonar.PNG" alt="Project 2"
-                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                <!-- Project 2: Sonar Music -->
+                <article class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/img/sonar.PNG" alt="Sonar Music"
+                            class="project-image"
                             loading="lazy">
-
-
                     </div>
 
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-white">Sonar Music</h3>
-                        <p class="text-gray-400 text-sm mb-4">Welcome to Sonar Music, a music streaming platform
+                        <p class="text-gray-400 text-sm mb-4" data-en="Welcome to Sonar Music, a music streaming platform developed exclusively for portfolio purposes. This project was created to showcase web development skills using a variety of modern technologies." data-pt="Bem-vindo ao Sonar Music, uma plataforma de streaming de música desenvolvida exclusivamente para fins de portfólio. Este projeto foi criado para demonstrar habilidades de desenvolvimento web usando uma variedade de tecnologias modernas.">Welcome to Sonar Music, a music streaming platform
                             developed exclusively for portfolio purposes. This project was created to showcase web
                             development skills using a variety of modern technologies.</p>
 
@@ -610,587 +1388,411 @@
                             <div class="flex gap-4">
                                 <a href="https://github.com/mthfl/SonarMusic" target="_blank"
                                     class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
+                                    <i class="fab fa-github text-xl"></i>
                                 </a>
                             </div>
 
                             <a href="http://sonar.infinityfreeapp.com/app/main/index.php" target="_blank"
                                 class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
-                                Click here
+                                <span data-en="View Live" data-pt="Ver Online">View Live</span>
                             </a>
                         </div>
                     </div>
                 </article>
 
+                <!-- Project 3: List Day -->
+                <article class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/img/listday.png" alt="List Day"
+                            class="project-image"
+                            loading="lazy">
+                    </div>
 
-                <article
-                class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                <div class="relative aspect-video overflow-hidden">
-                    <img src="./assets/img/listday.png" alt="Project 1"
-                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                        loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">List Day</h3>
+                        <p class="text-gray-400 text-sm mb-4" data-en="List of the Day is a curated selection of daily items, tips, or recommendations, presented in an organized and engaging format. It can be used in productivity apps, e-commerce platforms, blogs, or content websites." data-pt="Lista do Dia é uma seleção curada de itens diários, dicas ou recomendações, apresentados em um formato organizado e envolvente. Pode ser usado em aplicativos de produtividade, plataformas de e-commerce, blogs ou sites de conteúdo.">List of the Day is a curated selection of daily items, tips, or recommendations, presented in an organized and engaging format. It can be used in productivity apps, e-commerce platforms, blogs, or content websites.</p>
 
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-4">
+                                <a href="https://github.com/mthfl/list_of_the_day" target="_blank"
+                                    class="text-green-500 hover:text-green-400 transition-colors">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                            </div>
 
-                </div>
-
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 text-white">List Day</h3>
-                    <p class="text-gray-400 text-sm mb-4">List of the Day is a curated selection of daily items, tips, or recommendations, presented in an organized and engaging format. It can be used in productivity apps, e-commerce platforms, blogs, or content websites to highlight new releases, top priorities, daily deals, or inspiration.</p>
-
-                    <div class="flex justify-between items-center">
-                        <div class="flex gap-4">
-                            <a href="https://github.com/mthfl/list_of_the_day" target="_blank"
-                                class="text-green-500 hover:text-green-400 transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                            <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <a href="https://listday.infinityfreeapp.com" target="_blank"
+                            <a href="https://listday.infinityfreeapp.com" target="_blank"
                             class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
-                            Click here
+                            <span data-en="View Live" data-pt="Ver Online">View Live</span>
                         </a>
                     </div>
                 </div>
             </article>
 
-                <article
-                    class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="relative aspect-video overflow-hidden">
-                        <img src="./assets/img/Capturar.PNG" alt="Project 1"
-                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                            loading="lazy">
+            <!-- Project 4: Felix Restaurant -->
+            <article class="project-card">
+                <div class="project-image-container">
+                    <img src="./assets/img/Capturar.PNG" alt="Felix Restaurant"
+                        class="project-image"
+                        loading="lazy">
+                </div>
 
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">Felix Restaurant</h3>
+                    <p class="text-gray-400 text-sm mb-4" data-en="In this project, I designed and implemented a comprehensive purchase and reservation system as a tribute to my skills and dedication. This system streamlines the entire process and generates a detailed PDF receipt at the end of each transaction." data-pt="Neste projeto, projetei e implementei um sistema abrangente de compra e reserva como um tributo às minhas habilidades e dedicação. Este sistema simplifica todo o processo e gera um recibo PDF detalhado ao final de cada transação.">In this project, I designed and implemented a
+                        comprehensive purchase and reservation system as a tribute to my skills and dedication. This
+                        system streamlines the entire process and generates a detailed PDF receipt at the end of each
+                        transaction.</p>
 
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Felix Restaurant</h3>
-                        <p class="text-gray-400 text-sm mb-4">In this project, I designed and implemented a
-                            comprehensive purchase and reservation system as a tribute to my skills and dedication. This
-                            system not only streamlines the entire process of purchasing and reserving items but also
-                            ensures a professional touch by generating a detailed PDF receipt at the end of each
-                            transaction.</p>
-
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/Felix-Restaurant" target="_blank"
-                                    class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                </a>
-                            </div>
-
-                            <a href="https://restfelix.netlify.app/" target="_blank"
-                                class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
-                                Click here
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <a href="https://github.com/mthfl/Felix-Restaurant" target="_blank"
+                                class="text-green-500 hover:text-green-400 transition-colors">
+                                <i class="fab fa-github text-xl"></i>
                             </a>
                         </div>
+
+                        <a href="https://restfelix.netlify.app/" target="_blank"
+                            class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
+                            <span data-en="View Live" data-pt="Ver Online">View Live</span>
+                        </a>
                     </div>
-                </article>
+                </div>
+            </article>
 
-
-                <article
-                class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                <div class="relative aspect-video overflow-hidden">
-                    <img src="./assets/img/vortex.PNG" alt="Project 1"
-                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            <!-- Project 5: VortexFit -->
+            <article class="project-card">
+                <div class="project-image-container">
+                    <img src="./assets/img/vortex.PNG" alt="VortexFit"
+                        class="project-image"
                         loading="lazy">
-
-
                 </div>
 
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2 text-white">VortexFit</h3>
-                    <p class="text-gray-400 text-sm mb-4">Welcome to VortexFit, the ultimate solution for workout management and gym support! Built with React, Vite, and Tailwind CSS, this project is a modern, agile, and fully 
+                    <p class="text-gray-400 text-sm mb-4" data-en="Welcome to VortexFit, the ultimate solution for workout management and gym support! Built with React, Vite, and Tailwind CSS, this project is a modern, agile, and fully functional web application designed for both students and administrators." data-pt="Bem-vindo ao VortexFit, a solução definitiva para gerenciamento de treinos e suporte de academia! Construído com React, Vite e Tailwind CSS, este projeto é uma aplicação web moderna, ágil e totalmente funcional projetada para estudantes e administradores.">Welcome to VortexFit, the ultimate solution for workout management and gym support! Built with React, Vite, and Tailwind CSS, this project is a modern, agile, and fully 
                         functional web application designed for both students and administrators.</p>
 
                     <div class="flex justify-between items-center">
                         <div class="flex gap-4">
                             <a href="https://github.com/mthfl/VortexFit" target="_blank"
                                 class="text-green-500 hover:text-green-400 transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                            <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
+                                <i class="fab fa-github text-xl"></i>
                             </a>
                         </div>
 
                         <a href="https://github.com/mthfl/VortexFit" target="_blank"
                             class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
-                            Click here
+                            <span data-en="View Code" data-pt="Ver Código">View Code</span>
                         </a>
                     </div>
                 </div>
             </article>
 
-            <article
-            class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-            <div class="relative aspect-video overflow-hidden">
-                <img src="./assets/img/search.PNG" alt="Project 1"
-                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                    loading="lazy">
-
-
-            </div>
-
-            <div class="p-6">
-                <h3 class="text-xl font-bold mb-2 text-white">SearchShots</h3>
-                <p class="text-gray-400 text-sm mb-4">WA free photo search tool using the Unsplash API</p>
-
-                <div class="flex justify-between items-center">
-                    <div class="flex gap-4">
-                        <a href="https://github.com/mthfl/SearchShots" target="_blank"
-                            class="text-green-500 hover:text-green-400 transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </a>
-                    </div>
-
-                    <a href="https://mthfl.github.io/SearchShots/" target="_blank"
-                        class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
-                        Click here
-                    </a>
+            <!-- Project 6: SearchShots -->
+            <article class="project-card">
+                <div class="project-image-container">
+                    <img src="./assets/img/search.PNG" alt="SearchShots"
+                        class="project-image"
+                        loading="lazy">
                 </div>
-            </div>
-        </article>
 
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">SearchShots</h3>
+                    <p class="text-gray-400 text-sm mb-4" data-en="A free photo search tool using the Unsplash API" data-pt="Uma ferramenta gratuita de busca de fotos usando a API do Unsplash">A free photo search tool using the Unsplash API</p>
 
-
-                <article
-                    class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="relative aspect-video overflow-hidden">
-                        <img src="./assets/img/storm.PNG" alt="Project 1"
-                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                            loading="lazy">
-
-
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">StormTrack </h3>
-                        <p class="text-gray-400 text-sm mb-4">Welcome to WeatherApp, a sleek and modern web application
-                            designed to provide users with real-time weather updates for any city. Powered by a weather
-                            data API, this project is built using React, accelerated with Vite, and styled with Tailwind
-                            CSS for a clean, responsive design.</p>
-
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/Felix-Restaurant" target="_blank"
-                                    class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                </a>
-                            </div>
-
-                            <a href="https://mthfl.github.io/-StormTrack" target="_blank"
-                                class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
-                                Click here
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <a href="https://github.com/mthfl/SearchShots" target="_blank"
+                                class="text-green-500 hover:text-green-400 transition-colors">
+                                <i class="fab fa-github text-xl"></i>
                             </a>
                         </div>
+
+                        <a href="https://mthfl.github.io/SearchShots/" target="_blank"
+                            class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
+                            <span data-en="View Live" data-pt="Ver Online">View Live</span>
+                        </a>
                     </div>
-                </article>
-
-
-                <article
-                    class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="relative aspect-video overflow-hidden">
-                        <img src="./assets/img/projeto-5.PNG" alt="Project 1"
-                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                            loading="lazy">
-
-
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Globetrotter Viagens </h3>
-                        <p class="text-gray-400 text-sm mb-4">My project is an innovative travel agency platform that
-                            combines convenience and technology to provide the best experience when planning your next
-                            adventures. With an intuitive design and a user-friendly interface, the website allows users
-                            to explore amazing destinations, customize their packages, and make purchases directly on
-                            the platform.</p>
-
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/Felix-Restaurant" target="_blank"
-                                    class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                </a>
-                            </div>
-
-                            <a href="https://viagens-mth.netlify.app/" target="_blank"
-                                class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
-                                Click here
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-
-                <article
-                    class="bg-gray-800 rounded-xl overflow-hidden shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="relative aspect-video overflow-hidden">
-                        <img src="./assets/img/tela_game.png" alt="Project 2"
-                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                            loading="lazy">
-
-
-                    </div>
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Educational Tic-Tac-Toe</h3>
-                        <p class="text-gray-400 text-sm mb-4">This system provides an interactive platform for teaching
-                            logic and strategy through tic-tac-toe. It includes solo and multiplayer game modes,
-                            educational tips, performance feedback, and theme customization. Developed for elementary
-                            school students, it promotes interaction and learning within the school community.</p>
-
-
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/jogo-da-velha" target="_blank"
-                                    class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="text-green-500 hover:text-green-400 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                </a>
-                            </div>
-
-                            <a href="https://new-game01.netlify.app/" target="_blank"
-                                class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity">
-                                Click here
-                            </a>
-                        </div>
-                    </div>
-                </article>
+                </div>
+            </article>
             </div>
         </div>
     </section>
+
+    <!-- Skills Section (Moved to the end) -->
     <section class="py-20 bg-gray-800" id="skills">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">My Skills</h2>
+            <h2 class="text-3xl font-bold text-center mb-10 gradient-text" data-en="My Skills" data-pt="Minhas Habilidades">My Skills</h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto" data-en="Technologies and tools I use to bring products to life" data-pt="Tecnologias e ferramentas que uso para dar vida aos produtos">Technologies and tools I use to bring products to life</p>
 
             <div class="relative">
                 <button
                     class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-gray-800 to-gray-900 p-4 rounded-r-2xl text-white hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl scroll-btn-left hidden md:block backdrop-blur-sm"
-                    style="margin-left: -40px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    style="margin-left: -20px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
 
                 <div class="overflow-x-auto scrollbar-hide scroll-smooth" id="skills-container">
-                    <div class="flex gap-12 min-w-max px-6 py-8">
-
+                    <div class="flex gap-6 md:gap-8 min-w-max px-4 py-6">
+                        <!-- HTML -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="HTML5" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">HTML5 - Linguagem de marcação para estruturar
+                                <p class="text-white text-center text-sm" data-en="HTML5 - Markup language for structuring and presenting content on the web" data-pt="HTML5 - Linguagem de marcação para estruturar e apresentar conteúdo na web">HTML5 - Linguagem de marcação para estruturar
                                     e apresentar conteúdo na web</p>
                             </div>
                         </div>
 
-
+                        <!-- CSS -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="CSS3" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">CSS3 - Linguagem de estilização para design e
+                                <p class="text-white text-center text-sm" data-en="CSS3 - Styling language for design and layout of web pages" data-pt="CSS3 - Linguagem de estilização para design e layout de páginas web">CSS3 - Linguagem de estilização para design e
                                     layout de páginas web</p>
                             </div>
                         </div>
 
-
+                        <!-- JavaScript -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="JavaScript" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">JavaScript - Linguagem de programação para
+                                <p class="text-white text-center text-sm" data-en="JavaScript - Programming language for creating interactivity on websites" data-pt="JavaScript - Linguagem de programação para criar interatividade em websites">JavaScript - Linguagem de programação para
                                     criar interatividade em websites</p>
                             </div>
                         </div>
 
-
+                        <!-- Tailwind -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="Tailwind CSS" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">Tailwind CSS - Framework CSS utilitário para
+                                <p class="text-white text-center text-sm" data-en="Tailwind CSS - Utility-first CSS framework for rapid and responsive development" data-pt="Tailwind CSS - Framework CSS utilitário para desenvolvimento rápido e responsivo">Tailwind CSS - Framework CSS utilitário para
                                     desenvolvimento rápido e responsivo</p>
                             </div>
                         </div>
 
+                        <!-- Bootstrap -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="Bootstrap" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">Bootstrap - Framework CSS popular para
+                                <p class="text-white text-center text-sm" data-en="Bootstrap - Popular CSS framework for responsive web development" data-pt="Bootstrap - Framework CSS popular para desenvolvimento web responsivo">Bootstrap - Framework CSS popular para
                                     desenvolvimento web responsivo</p>
                             </div>
                         </div>
 
-
+                        <!-- Git -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="Git" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">Git - Sistema de controle de versão para
+                                <p class="text-white text-center text-sm" data-en="Git - Version control system for code management" data-pt="Git - Sistema de controle de versão para gerenciamento de código">Git - Sistema de controle de versão para
                                     gerenciamento de código</p>
                             </div>
                         </div>
 
+                        <!-- GitHub -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
-                                    class="w-20 h-20 text-white filter invert" />
+                                    class="w-16 h-16 text-white filter invert skill-icon" alt="GitHub" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">GitHub - Plataforma de hospedagem de código e
+                                <p class="text-white text-center text-sm" data-en="GitHub - Code hosting platform and collaboration" data-pt="GitHub - Plataforma de hospedagem de código e colaboração">GitHub - Plataforma de hospedagem de código e
                                     colaboração</p>
                             </div>
                         </div>
 
-
-
-
+                        <!-- React -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="React" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">React - Biblioteca JavaScript para construção
+                                <p class="text-white text-center text-sm" data-en="React - JavaScript library for building user interfaces" data-pt="React - Biblioteca JavaScript para construção de interfaces de usuário">React - Biblioteca JavaScript para construção
                                     de interfaces de usuário</p>
                             </div>
                         </div>
 
+                        <!-- Node.js -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="Node.js" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">Node.js - Ambiente de execução JavaScript do
+                                <p class="text-white text-center text-sm" data-en="Node.js - JavaScript runtime environment for server-side" data-pt="Node.js - Ambiente de execução JavaScript do lado do servidor">Node.js - Ambiente de execução JavaScript do
                                     lado do servidor</p>
                             </div>
                         </div>
 
+                        <!-- Figma -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="Figma" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">Figma - Ferramenta de design colaborativo para
+                                <p class="text-white text-center text-sm" data-en="Figma - Collaborative design tool for interfaces" data-pt="Figma - Ferramenta de design colaborativo para interfaces">Figma - Ferramenta de design colaborativo para
                                     interfaces</p>
                             </div>
                         </div>
 
-
+                        <!-- Canva -->
                         <div
-                            class="group relative bg-gray-900 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-48 cursor-pointer skill-card">
-                            <div class="w-full h-32 flex items-center justify-center">
+                            class="group relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
-                                    class="w-20 h-20" />
+                                    class="w-16 h-16 skill-icon" alt="Canva" />
                             </div>
                             <div
                                 class="absolute inset-0 bg-black bg-opacity-90 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                                <p class="text-white text-center text-sm">Canva - Plataforma de design gráfico para
+                                <p class="text-white text-center text-sm" data-en="Canva - Graphic design platform for creating attractive visuals" data-pt="Canva - Plataforma de design gráfico para criar visuais atraentes">Canva - Plataforma de design gráfico para
                                     criar visuais atraentes</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
                 <button
-                    class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-l from-gray-800 to-gray-900 p-4 rounded-l-2xl text-white hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl scroll-btn-right hidden md:block backdrop-blur-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-l from-gray-800 to-gray-900 p-4 rounded-l-2xl text-white hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl scroll-btn-right hidden md:block backdrop-blur-sm"
+                    style="margin-right: -20px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
             </div>
+
+            <!-- Mobile Skills Grid - Improved for better responsiveness -->
+            <div class="mobile-skills-grid mt-8 md:hidden">
+                <div class="mobile-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                        alt="HTML5" />
+                    <span class="text-gray-300 font-medium">HTML5</span>
+                </div>
+                <div class="mobile-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                        alt="CSS3" />
+                    <span class="text-gray-300 font-medium">CSS3</span>
+                </div>
+                <div class="mobile-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript" />
+                    <span class="text-gray-300 font-medium">JS</span>
+                </div>
+                <div class="mobile-skill-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+                        alt="Tailwind" />
+                    <span class="text-gray-300 font-medium">Tailwind</span>
+                </div>
+                <div class="mobile-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        alt="React" />
+                    <span class="text-gray-300 font-medium">React</span>
+                </div>
+                <div class="mobile-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                        alt="Figma" />
+                    <span class="text-gray-300 font-medium">Figma</span>
+                </div>
+                <div class="mobile-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                        alt="Git" />
+                    <span class="text-gray-300 font-medium">Git</span>
+                </div>
+                <div class="mobile-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        class="filter invert" alt="GitHub" />
+                    <span class="text-gray-300 font-medium">GitHub</span>
+                </div>
+                <div class="mobile-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js" />
+                    <span class="text-gray-300 font-medium">Node.js</span>
+                </div>
+            </div>
         </div>
     </section>
 
-
-    </style>
-
-
-
-
-
-    <footer class="w-full bg-[#0f172a] text-white py-8 sm:py-12 relative overflow-hidden">
-
-        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-blue-500"></div>
-
-
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none"></div>
-
-
-
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
-
-                <div class="text-center md:text-left space-y-2 sm:space-y-3 w-full md:w-auto">
-                    <div class="flex items-center justify-center md:justify-start gap-2 sm:gap-3 flex-wrap">
-                        <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-bold text-lg sm:text-xl">
-                            Matheus Felix
-                        </span>
-                        <span class="text-gray-400 hidden sm:inline">|</span>
-                        <span class="text-xs sm:text-sm text-gray-300 font-light">
-                            Front-end Developer
-                        </span>
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="footer-content">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <svg width="40" height="40" viewBox="0 0 100 100">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4ade80" />
+                                    <stop offset="100%" style="stop-color:#3b82f6" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="url(#footerLogoGradient)" />
+                            <path d="M30 65 L30 35 L50 55 L70 35 L70 65" stroke="white" stroke-width="4" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold gradient-text">Matheus Felix</h3>
+                            <p class="text-gray-400 text-sm" data-en="Front-end Developer" data-pt="Desenvolvedor Front-end">Front-end Developer</p>
+                        </div>
                     </div>
-                    <p class="text-xs sm:text-sm text-gray-400 font-light">
-                        &copy; 2024
-                        <span class="block sm:inline">Todos os direitos reservados.</span>
-                    </p>
                 </div>
 
-
-                <div class="flex flex-col items-center md:items-end gap-4 sm:gap-6 w-full md:w-auto">
-
-                    <div class="flex items-center justify-center gap-4 sm:gap-6 md:gap-8">
-                        <a href="https://github.com/mthfl" target="_blank"
-                            class="group relative text-xl sm:text-2xl text-gray-300 hover:text-green-400 transition-all duration-300">
-                            <i class="fab fa-github"></i>
-                            <span
-                                class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                <div class="flex flex-col items-center md:items-end footer-links">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="https://github.com/mthfl" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/matheus-fl" target="_blank"
-                            class="group relative text-xl sm:text-2xl text-gray-300 hover:text-green-400 transition-all duration-300">
-                            <i class="fab fa-linkedin"></i>
-                            <span
-                                class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                        <a href="https://www.linkedin.com/in/matheus-fl" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
                         </a>
-                        <a href="https://www.instagram.com/mth_fl" target="_blank"
-                            class="group relative text-xl sm:text-2xl text-gray-300 hover:text-green-400 transition-all duration-300">
-                            <i class="fab fa-instagram"></i>
-                            <span
-                                class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                        <a href="https://www.instagram.com/mth_fl" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
                         </a>
                     </div>
-
-
-                    <div class="text-xs sm:text-sm text-gray-400 text-center md:text-right">
-                        <p class="font-light">Desenvolvido por Matheus Felix</p>
-                        <a href="mailto:matheus.dev91@gmail.com"
-                            class="inline-block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:opacity-80 transition-opacity duration-300">
+                    <div class="text-center md:text-right">
+                        <p class="text-gray-400 text-sm" data-en="&copy; 2024 All rights reserved." data-pt="&copy; 2024 Todos os direitos reservados.">&copy; 2024 Todos os direitos reservados.</p>
+                        <a href="mailto:matheus.dev91@gmail.com" class="text-gray-400 hover:text-white transition-colors text-sm">
                             matheus.dev91@gmail.com
                         </a>
                     </div>
@@ -1199,193 +1801,309 @@
         </div>
     </footer>
 
-    <script>document.addEventListener('DOMContentLoaded', function () {
-            const skillCards = document.querySelectorAll('.skill-card');
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const htmlElement = document.documentElement;
 
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+function toggleTheme() {
+    if (htmlElement.classList.contains('dark')) {
+        htmlElement.classList.remove('dark');
+        htmlElement.classList.add('light');
+        localStorage.setItem('theme', 'light');
+    } else {
+        htmlElement.classList.remove('light');
+        htmlElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+    }
+}
 
-            if (isMobile) {
-                skillCards.forEach(card => {
-                    card.addEventListener('click', function () {
-
-                        skillCards.forEach(c => {
-                            if (c !== card) {
-                                c.querySelector('div:last-child').classList.remove('opacity-100');
-                                c.querySelector('div:last-child').classList.add('opacity-0');
-                            }
-                        });
-
-
-                        const description = this.querySelector('div:last-child');
-                        if (description.classList.contains('opacity-0')) {
-                            description.classList.remove('opacity-0');
-                            description.classList.add('opacity-100');
-                        } else {
-                            description.classList.remove('opacity-100');
-                            description.classList.add('opacity-0');
-                        }
-                    });
-                });
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    htmlElement.classList.remove('dark', 'light');
+    htmlElement.classList.add(savedTheme);
+}
+        
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+        
+        // Language translation functionality
+        const languageOptions = document.querySelectorAll('.language-option');
+        const currentLanguageElement = document.getElementById('current-language');
+        let currentLanguage = localStorage.getItem('language') || 'en';
+        
+        // Initialize with saved language preference
+        updateLanguage(currentLanguage);
+        
+        function updateLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            
+            if (currentLanguageElement) {
+                currentLanguageElement.textContent = lang.toUpperCase();
             }
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-en]').forEach(element => {
+                if (element.hasAttribute(`data-${lang}`)) {
+                    element.textContent = element.getAttribute(`data-${lang}`);
+                }
+            });
+        }
+        
+        languageOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const lang = option.getAttribute('data-lang');
+                updateLanguage(lang);
+            });
         });
 
+        // Mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const menuBackdrop = document.getElementById('mobile-menu-backdrop');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+            menuBackdrop.classList.add('hidden');
+        }
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
+            menuBackdrop.classList.toggle('hidden');
+        });
+
+        closeMenu.addEventListener('click', closeMobileMenu);
+        menuBackdrop.addEventListener('click', closeMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Skills carousel
         document.addEventListener('DOMContentLoaded', function () {
             const container = document.getElementById('skills-container');
             const leftButton = document.querySelector('.scroll-btn-left');
             const rightButton = document.querySelector('.scroll-btn-right');
 
-            const scrollAmount = 300; // Ajuste este valor conforme necessário
+            if (container && leftButton && rightButton) {
+                const scrollAmount = 300;
 
-            leftButton.addEventListener('click', () => {
-                container.scrollBy({
-                    left: -scrollAmount,
-                    behavior: 'smooth'
+                leftButton.addEventListener('click', () => {
+                    container.scrollBy({
+                        left: -scrollAmount,
+                        behavior: 'smooth'
+                    });
                 });
-            });
 
-            rightButton.addEventListener('click', () => {
-                container.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
+                rightButton.addEventListener('click', () => {
+                    container.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
                 });
-            });
-        });
 
+                // Touch/drag scrolling for mobile
+                let isDown = false;
+                let startX;
+                let scrollLeft;
 
-
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const container = document.getElementById('skills-container');
-            const btnLeft = document.querySelector('.scroll-btn-left');
-            const btnRight = document.querySelector('.scroll-btn-right');
-            const indicators = document.querySelectorAll('.scroll-indicator');
-
-            const scrollAmount = 500;
-
-            btnRight.addEventListener('click', () => {
-                container.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
+                container.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    container.classList.add('active');
+                    startX = e.pageX - container.offsetLeft;
+                    scrollLeft = container.scrollLeft;
                 });
-                updateIndicators();
-            });
 
-            btnLeft.addEventListener('click', () => {
-                container.scrollBy({
-                    left: -scrollAmount,
-                    behavior: 'smooth'
+                container.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    container.classList.remove('active');
                 });
-                updateIndicators();
-            });
 
-            function updateIndicators() {
-                const scrollPercentage = container.scrollLeft / (container.scrollWidth - container.clientWidth);
-
-                indicators.forEach((indicator, index) => {
-                    const section = index / (indicators.length - 1);
-                    indicator.classList.toggle('active',
-                        Math.abs(scrollPercentage - section) < 1 / (indicators.length - 1));
+                container.addEventListener('mouseup', () => {
+                    isDown = false;
+                    container.classList.remove('active');
                 });
-            }
 
-            container.addEventListener('scroll', updateIndicators);
-
-
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            container.addEventListener('mousedown', (e) => {
-                isDown = true;
-                container.classList.add('active');
-                startX = e.pageX - container.offsetLeft;
-                scrollLeft = container.scrollLeft;
-            });
-
-            container.addEventListener('mouseleave', () => {
-                isDown = false;
-                container.classList.remove('active');
-            });
-
-            container.addEventListener('mouseup', () => {
-                isDown = false;
-                container.classList.remove('active');
-            });
-
-            container.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - container.offsetLeft;
-                const walk = (x - startX) * 2;
-                container.scrollLeft = scrollLeft - walk;
-            });
-        });
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuToggle = document.getElementById("menu-toggle");
-            const closeMenu = document.getElementById("close-menu");
-            const mobileMenu = document.getElementById("mobile-menu");
-            const mobileMenuBackdrop = document.getElementById("mobile-menu-backdrop");
-            const menuLinks = document.querySelectorAll(".menu-link");
-
-
-            function openMenu() {
-                mobileMenu.classList.add("active");
-                mobileMenuBackdrop.classList.remove("hidden");
-            }
-
-
-            function closeMobileMenu() {
-                mobileMenu.classList.remove("active");
-                mobileMenuBackdrop.classList.add("hidden");
-            }
-
-
-            menuToggle.addEventListener("click", openMenu);
-            closeMenu.addEventListener("click", closeMobileMenu);
-            mobileMenuBackdrop.addEventListener("click", closeMobileMenu);
-
-
-            menuLinks.forEach(link => {
-                link.addEventListener("click", (e) => {
+                container.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
                     e.preventDefault();
-                    closeMobileMenu();
-                    const targetId = link.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        const headerOffset = 80; // Ajuste o valor conforme a altura do cabeçalho
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
+                    const x = e.pageX - container.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    container.scrollLeft = scrollLeft - walk;
                 });
+            }
+        });
+
+        // Particles.js initialization - optimized for mobile
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof particlesJS !== 'undefined') {
+                // Check if device is mobile
+                const isMobile = window.innerWidth <= 768;
+                
+                particlesJS('particles-js', {
+                    particles: {
+                        number: {
+                            // Fewer particles on mobile for better performance
+                            value: isMobile ? 40 : 80,
+                            density: {
+                                enable: true,
+                                value_area: isMobile ? 600 : 800
+                            }
+                        },
+                        color: {
+                            value: ['#4ade80', '#3b82f6']
+                        },
+                        shape: {
+                            type: 'circle',
+                            stroke: {
+                                width: 0,
+                                color: '#000000'
+                            }
+                        },
+                        opacity: {
+                            value: 0.5,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        size: {
+                            value: isMobile ? 2 : 3,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 2,
+                                size_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: isMobile ? 100 : 150,
+                            color: '#4ade80',
+                            opacity: 0.4,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: isMobile ? 1.5 : 1,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'bounce', // Keep particles inside
+                            bounce: true,
+                            attract: {
+                                enable: false,
+                                rotateX: 600,
+                                rotateY: 1200
+                            }
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: 'grab'
+                            },
+                            onclick: {
+                                enable: true,
+                                mode: 'push'
+                            },
+                            resize: true
+                        },
+                        modes: {
+                            grab: {
+                                distance: isMobile ? 100 : 140,
+                                line_linked: {
+                                    opacity: 1
+                                }
+                            },
+                            push: {
+                                particles_nb: isMobile ? 2 : 4
+                            }
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
+        });
+
+        // GSAP animations
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+                
+                // Animate sections on scroll
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    gsap.from(section.children, {
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play none none reverse"
+                        },
+                        y: 30,
+                        opacity: 0,
+                        duration: 0.8,
+                        stagger: 0.15,
+                        ease: "power2.out"
+                    });
+                });
+            }
+        });
+
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
             });
 
-            gsap.registerPlugin(ScrollTrigger);
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                gsap.from(section.children, {
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    },
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.8,
-                    stagger: 0.15,
-                    ease: "power2.out"
-                });
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav-link');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active-nav-link');
+                }
             });
         });
     </script>
-
-
 </body>
 
 </html>
