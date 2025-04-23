@@ -2,1840 +2,1881 @@
 <html lang="pt-br" class="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Felix | Front-End Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <link rel="icon" type="image/svg+xml" href="./assets/img/icon.svg">
-    <style>
-        :root {
-            --bg-primary-dark: #111827;
-            --bg-secondary-dark: #1f2937;
-            --text-primary-dark: #ffffff;
-            --text-secondary-dark: #9ca3af;
-            
-            --bg-primary-light: #f9fafb;
-            --bg-secondary-light: #f3f4f6;
-            --text-primary-light: #111827;
-            --text-secondary-light: #4b5563;
-            
-            --about-bg-dark: #1a202c;
-            --about-card-dark: #0f172a;
-            --about-accent: #38b2ac;
-            --about-accent-secondary: #3b82f6;
-            --about-stat-bg: #1e293b;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matheus Felix | Front-End Developer</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<link rel="icon" type="image/svg+xml" href="./assets/img/icon.svg">
+<style>
+    :root {
+        --bg-primary-dark: #111827;
+        --bg-secondary-dark: #1f2937;
+        --text-primary-dark: #ffffff;
+        --text-secondary-dark: #9ca3af;
+        
+        --bg-primary-light: #f9fafb;
+        --bg-secondary-light: #f3f4f6;
+        --text-primary-light: #111827;
+        --text-secondary-light: #4b5563;
+        
+        --about-bg-dark: #1a202c;
+        --about-card-dark: #0f172a;
+        --about-accent: #38b2ac;
+        --about-accent-secondary: #3b82f6;
+        --about-stat-bg: #1e293b;
+    }
 
-        .dark {
-            --bg-primary: var(--bg-primary-dark);
-            --bg-secondary: var(--bg-secondary-dark);
-            --text-primary: var(--text-primary-dark);
-            --text-secondary: var(--text-secondary-dark);
-        }
+    .dark {
+        --bg-primary: var(--bg-primary-dark);
+        --bg-secondary: var(--bg-secondary-dark);
+        --text-primary: var(--text-primary-dark);
+        --text-secondary: var(--text-secondary-dark);
+    }
 
-        .light {
-            --bg-primary: var(--bg-primary-light);
-            --bg-secondary: var(--bg-secondary-light);
-            --text-primary: var(--text-primary-light);
-            --text-secondary: var(--text-secondary-light);
-        }
+    .light {
+        --bg-primary: var(--bg-primary-light);
+        --bg-secondary: var(--bg-secondary-light);
+        --text-primary: var(--text-primary-light);
+        --text-secondary: var(--text-secondary-light);
+    }
 
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+    body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-        .bg-gray-900 {
-            background-color: var(--bg-primary);
-        }
+    .bg-gray-900 {
+        background-color: var(--bg-primary);
+    }
 
-        .bg-gray-800 {
-            background-color: var(--bg-secondary);
-        }
+    .bg-gray-800 {
+        background-color: var(--bg-secondary);
+    }
 
-        .text-white {
-            color: var(--text-primary);
-        }
+    .text-white {
+        color: var(--text-primary);
+    }
 
-        .text-gray-300, .text-gray-400 {
-            color: var(--text-secondary);
-        }
+    .text-gray-300, .text-gray-400 {
+        color: var(--text-secondary);
+    }
 
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
 
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
+    ::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background: #4b5563;
-            border-radius: 4px;
-        }
+    ::-webkit-scrollbar-thumb {
+        background: #4b5563;
+        border-radius: 4px;
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #6b7280;
-        }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280;
+    }
 
-        .gradient-text {
-            background: linear-gradient(to right, #4ade80, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
-        }
+    .gradient-text {
+        background: linear-gradient(to right, #4ade80, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
 
-        .circuit-bg {
-            background-color: var(--bg-primary);
-            background-image: 
-                radial-gradient(rgba(74, 222, 128, 0.1) 2px, transparent 2px),
-                linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
-            background-size: 20px 20px, 20px 20px, 20px 20px;
-            background-position: center;
-        }
+    .circuit-bg {
+        background-color: var(--bg-primary);
+        background-image: 
+            radial-gradient(rgba(74, 222, 128, 0.1) 2px, transparent 2px),
+            linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+        background-size: 20px 20px, 20px 20px, 20px 20px;
+        background-position: center;
+    }
 
-        #mobile-menu {
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            background-color: var(--bg-primary);
-        }
+    #mobile-menu {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        background-color: var(--bg-primary);
+    }
 
-        section {
-            transition: background-color 0.5s ease;
-        }
+    section {
+        transition: background-color 0.5s ease;
+    }
 
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
 
+    .skill-card {
+        transition: all 0.3s ease;
+        min-width: 140px;
+        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        border: 1px solid rgba(75, 85, 99, 0.2);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .light .skill-card {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border: 1px solid rgba(229, 231, 235, 0.8);
+        background: linear-gradient(135deg, #e5e7eb 0%, #f9fafb 100%);
+    }
+
+    .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        border-color: rgba(74, 222, 128, 0.3);
+    }
+
+    .skill-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(74, 222, 128, 0.05), rgba(59, 130, 246, 0.05));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .skill-card:hover::before {
+        opacity: 1;
+    }
+
+    .skill-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover .skill-icon {
+        transform: scale(1.1);
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-link {
+        position: relative;
+        padding-bottom: 2px;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to right, #4ade80, #3b82f6);
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .fade-in {
+        animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .section-divider {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(156, 163, 175, 0.2), transparent);
+        margin: 2rem 0;
+    }
+
+    .project-card {
+        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        border-radius: 0.75rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(75, 85, 99, 0.2);
+        position: relative;
+    }
+
+    .light .project-card {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border: 1px solid rgba(229, 231, 235, 0.8);
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        border-color: rgba(74, 222, 128, 0.3);
+    }
+
+    .project-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(74, 222, 128, 0.05), rgba(59, 130, 246, 0.05));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .project-card:hover::before {
+        opacity: 1;
+    }
+
+    .certificate-card {
+        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(75, 85, 99, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .light .certificate-card {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border: 1px solid rgba(229, 231, 235, 0.8);
+    }
+
+    .certificate-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        border-color: rgba(74, 222, 128, 0.3);
+    }
+
+    .certificate-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(74, 222, 128, 0.05), rgba(59, 130, 246, 0.05));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .certificate-card:hover::before {
+        opacity: 1;
+    }
+
+    .certificate-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #60a5fa;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-decoration: underline;
+        position: relative;
+        z-index: 10;
+    }
+
+    .certificate-link:hover {
+        color: #93c5fd;
+        transform: translateX(5px);
+    }
+
+    .primary-button {
+        background: linear-gradient(to right, #4ade80, #3b82f6);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .primary-button::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(transparent, rgba(255, 255, 255, 0.2), transparent);
+        transform: rotate(45deg) translateX(-100%);
+        transition: transform 0.6s ease;
+    }
+
+    .primary-button:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .primary-button:hover::after {
+        transform: rotate(45deg) translateX(100%);
+    }
+
+    .secondary-button {
+        background: transparent;
+        color: var(--text-primary);
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        border: 1px solid #4ade80;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .secondary-button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.1), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .secondary-button:hover {
+        background: rgba(74, 222, 128, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .secondary-button:hover::after {
+        left: 100%;
+    }
+
+    .container-narrow {
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container-medium {
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container-wide {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mobile-menu-item {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .light .mobile-menu-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu-item:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding-left: 0.5rem;
+    }
+
+    .light .mobile-menu-item:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .project-image-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+    }
+
+    .project-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-image {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
         .skill-card {
-            transition: all 0.3s ease;
-            min-width: 140px;
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-            border: 1px solid rgba(75, 85, 99, 0.2);
-            overflow: hidden;
-            position: relative;
+            min-width: 110px;
+            padding: 0.75rem;
         }
-
-        .light .skill-card {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(229, 231, 235, 0.8);
-            background: linear-gradient(135deg, #e5e7eb 0%, #f9fafb 100%);
+        
+        .skill-card img {
+            width: 36px;
+            height: 36px;
         }
+    }
 
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border-color: rgba(74, 222, 128, 0.3);
-        }
-
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(74, 222, 128, 0.05), rgba(59, 130, 246, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .skill-card:hover::before {
-            opacity: 1;
-        }
-
-        .skill-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .skill-card:hover .skill-icon {
-            transform: scale(1.1);
-        }
-
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-
-        .nav-link {
-            position: relative;
-            padding-bottom: 2px;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(to right, #4ade80, #3b82f6);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .fade-in {
-            animation: fadeIn 0.8s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(156, 163, 175, 0.2), transparent);
-            margin: 2rem 0;
-        }
-
-        .project-card {
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-            border-radius: 0.75rem;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(75, 85, 99, 0.2);
-            position: relative;
-        }
-
-        .light .project-card {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(229, 231, 235, 0.8);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            border-color: rgba(74, 222, 128, 0.3);
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(74, 222, 128, 0.05), rgba(59, 130, 246, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .project-card:hover::before {
-            opacity: 1;
-        }
-
-        .certificate-card {
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(75, 85, 99, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .light .certificate-card {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(229, 231, 235, 0.8);
-        }
-
-        .certificate-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            border-color: rgba(74, 222, 128, 0.3);
-        }
-
-        .certificate-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(74, 222, 128, 0.05), rgba(59, 130, 246, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .certificate-card:hover::before {
-            opacity: 1;
-        }
-
-        .certificate-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #60a5fa;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: underline;
-            position: relative;
-            z-index: 10;
-        }
-
-        .certificate-link:hover {
-            color: #93c5fd;
-            transform: translateX(5px);
-        }
-
-        .primary-button {
-            background: linear-gradient(to right, #4ade80, #3b82f6);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .primary-button::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(transparent, rgba(255, 255, 255, 0.2), transparent);
-            transform: rotate(45deg) translateX(-100%);
-            transition: transform 0.6s ease;
-        }
-
-        .primary-button:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-
-        .primary-button:hover::after {
-            transform: rotate(45deg) translateX(100%);
-        }
-
-        .secondary-button {
-            background: transparent;
-            color: var(--text-primary);
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 500;
-            border: 1px solid #4ade80;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .secondary-button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .secondary-button:hover {
-            background: rgba(74, 222, 128, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .secondary-button:hover::after {
-            left: 100%;
-        }
-
-        .container-narrow {
-            max-width: 768px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .container-medium {
-            max-width: 1024px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .container-wide {
-            max-width: 1280px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .mobile-menu-item {
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .light .mobile-menu-item {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .mobile-menu-item:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding-left: 0.5rem;
-        }
-
-        .light .mobile-menu-item:hover {
-            background-color: rgba(0, 0, 0, 0.05);
-        }
-
-        .project-image-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            overflow: hidden;
-        }
-
-        .project-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .project-image {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .skill-card {
-                min-width: 110px;
-                padding: 0.75rem;
-            }
-            
-            .skill-card img {
-                width: 36px;
-                height: 36px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-buttons {
-                justify-content: center;
-            }
-            
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .project-card {
-                margin-bottom: 1.5rem;
-            }
-
-            .profile-image-container {
-                margin-bottom: 2rem;
-            }
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 1024px) {
-            .projects-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .certificate-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .footer-content {
-            display: flex;
+    @media (max-width: 640px) {
+        .hero-content {
             flex-direction: column;
-            align-items: center;
             text-align: center;
         }
-
-        @media (min-width: 768px) {
-            .footer-content {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-                text-align: left;
-            }
-            
-            .footer-links {
-                align-items: flex-end;
-            }
+        
+        .hero-buttons {
+            justify-content: center;
         }
-
-        button, a {
-            touch-action: manipulation;
+        
+        .about-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
-
-        .active-nav-link {
-            color: var(--text-primary);
-        }
-
-        .active-nav constructive-nav-link::after {
-            width: 100%;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        section {
-            padding: 5rem 1rem;
-        }
-
-        @media (min-width: 640px) {
-            section {
-                padding: 6rem 1.5rem;
-            }
-        }
-
-        .hero-section {
-            padding-top: 8rem;
-            padding-bottom: 8rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        @media (min-width: 1024px) {
-            .hero-section {
-                padding-top: 10rem;
-                padding-bottom: 10rem;
-            }
-        }
-
-        .enhanced-header {
-            backdrop-filter: blur(8px);
-            background-color: rgba(17, 24, 39, 0.85);
-            border-bottom: 1px solid rgba(75, 85, 99, 0.3);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .light .enhanced-header {
-            background-color: rgba(255, 255, 255, 0.85);
-            border-bottom: 1px solid rgba(229, 231, 235, 0.8);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        
+        .project-card {
+            margin-bottom: 1.5rem;
         }
 
         .profile-image-container {
-            position: relative;
+            margin-bottom: 2rem;
         }
+    }
 
-        .profile-image-glow {
-            position: absolute;
-            inset: -5px;
-            background: linear-gradient(45deg, #4ade80, #3b82f6);
-            border-radius: 50%;
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+        .projects-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .certificate-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .footer-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+        }
+        
+        .footer-links {
+            align-items: flex-end;
+        }
+    }
+
+    button, a {
+        touch-action: manipulation;
+    }
+
+    .active-nav-link {
+        color: var(--text-primary);
+    }
+
+    .active-nav constructive-nav-link::after {
+        width: 100%;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    section {
+        padding: 5rem 1rem;
+    }
+
+    @media (min-width: 640px) {
+        section {
+            padding: 6rem 1.5rem;
+        }
+    }
+
+    .hero-section {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    @media (min-width: 1024px) {
+        .hero-section {
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+    }
+
+    .enhanced-header {
+        backdrop-filter: blur(8px);
+        background-color: rgba(17, 24, 39, 0.85);
+        border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .light .enhanced-header {
+        background-color: rgba(255, 255, 255, 0.85);
+        border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .profile-image-container {
+        position: relative;
+    }
+
+    .profile-image-glow {
+        position: absolute;
+        inset: -5px;
+        background: linear-gradient(45deg, #4ade80, #3b82f6);
+        border-radius: 50%;
+        filter: blur(15px);
+        opacity: 0.5;
+        z-index: -1;
+        animation: pulse 3s infinite alternate;
+    }
+
+    @keyframes pulse {
+        0% {
+            opacity: 0.3;
             filter: blur(15px);
-            opacity: 0.5;
-            z-index: -1;
-            animation: pulse 3s infinite alternate;
         }
-
-        @keyframes pulse {
-            0% {
-                opacity: 0.3;
-                filter: blur(15px);
-            }
-            100% {
-                opacity: 0.6;
-                filter: blur(20px);
-            }
+        100% {
+            opacity: 0.6;
+            filter: blur(20px);
         }
+    }
 
-        .certificate-logo {
-            transition: transform 0.3s ease;
-        }
+    .certificate-logo {
+        transition: transform 0.3s ease;
+    }
 
-        .certificate-card:hover .certificate-logo {
-            transform: scale(1.05);
-        }
+    .certificate-card:hover .certificate-logo {
+        transform: scale(1.05);
+    }
 
-        .logo-animation {
-            transition: transform 0.3s ease;
-        }
+    .logo-animation {
+        transition: transform 0.3s ease;
+    }
 
-        .logo-animation:hover {
-            transform: scale(1.05);
-        }
+    .logo-animation:hover {
+        transform: scale(1.05);
+    }
 
-        .menu-backdrop {
-            backdrop-filter: blur(5px);
-            transition: opacity 0.3s ease;
-        }
+    .menu-backdrop {
+        backdrop-filter: blur(5px);
+        transition: opacity 0.3s ease;
+    }
 
-        .skills-container {
-            position: relative;
-            overflow-x: auto;
-            padding: 1rem 0;
-        }
+    .skills-container {
+        position: relative;
+        overflow-x: auto;
+        padding: 1rem 0;
+    }
 
-        .skills-container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: 50px;
-            background: linear-gradient(to right, transparent, var(--bg-primary));
-            pointer-events: none;
-        }
+    .skills-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 50px;
+        background: linear-gradient(to right, transparent, var(--bg-primary));
+        pointer-events: none;
+    }
 
-        .project-tag {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            color: #60a5fa;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            transition: all 0.3s ease;
-        }
+    .project-tag {
+        background: rgba(59, 130, 246, 0.1);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        color: #60a5fa;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        transition: all 0.3s ease;
+    }
 
-        .project-tag:hover {
-            background: rgba(59, 130, 246, 0.2);
-            transform: translateY(-2px);
-        }
+    .project-tag:hover {
+        background: rgba(59, 130, 246, 0.2);
+        transform: translateY(-2px);
+    }
 
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #60a5fa;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
+    .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #60a5fa;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
 
-        .project-link:hover {
-            color: #93c5fd;
-            transform: translateX(3px);
-        }
+    .project-link:hover {
+        color: #93c5fd;
+        transform: translateX(3px);
+    }
 
-        .enhanced-footer {
-            background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
-            border-top: 1px solid rgba(75, 85, 99, 0.2);
-        }
+    .enhanced-footer {
+        background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+        border-top: 1px solid rgba(75, 85, 99, 0.2);
+    }
 
-        .light .enhanced-footer {
-            border-top: 1px solid rgba(229, 231, 235, 0.8);
-        }
+    .light .enhanced-footer {
+        border-top: 1px solid rgba(229, 231, 235, 0.8);
+    }
 
-        .social-icon {
-            transition: all 0.3s ease;
-        }
+    .social-icon {
+        transition: all 0.3s ease;
+    }
 
-        .social-icon:hover {
-            transform: translateY(-3px);
-            color: #4ade80;
-        }
+    .social-icon:hover {
+        transform: translateY(-3px);
+        color: #4ade80;
+    }
 
-        .theme-toggle {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: transparent;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            border: 1px solid rgba(156, 163, 175, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        border: 1px solid rgba(156, 163, 175, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
 
-        .theme-toggle:hover {
-            background-color: rgba(156, 163, 175, 0.1);
-            transform: scale(1.1);
-        }
+    .theme-toggle:hover {
+        background-color: rgba(156, 163, 175, 0.1);
+        transform: scale(1.1);
+    }
 
-        .light .theme-toggle {
-            border: 1px solid rgba(107, 114, 128, 0.3);
-        }
+    .light .theme-toggle {
+        border: 1px solid rgba(107, 114, 128, 0.3);
+    }
 
-        .theme-toggle-icon {
-            font-size: 18px;
-            transition: opacity 0.3s ease, transform 0.5s ease;
-            position: absolute;
-        }
+    .theme-toggle-icon {
+        font-size: 18px;
+        transition: opacity 0.3s ease, transform 0.5s ease;
+        position: absolute;
+    }
 
-        .theme-toggle-icon.sun {
-            color: #f59e0b;
-            opacity: 0;
-            transform: rotate(-90deg);
-        }
+    .theme-toggle-icon.sun {
+        color: #f59e0b;
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
 
-        .theme-toggle-icon.moon {
-            color: #e5e7eb;
-            opacity: 1;
-            transform: rotate(0);
-        }
+    .theme-toggle-icon.moon {
+        color: #e5e7eb;
+        opacity: 1;
+        transform: rotate(0);
+    }
 
-        .dark .theme-toggle-icon.sun {
-            opacity: 1;
-            transform: rotate(0);
-        }
+    .dark .theme-toggle-icon.sun {
+        opacity: 1;
+        transform: rotate(0);
+    }
 
-        .dark .theme-toggle-icon.moon {
-            opacity: 0;
-            transform: rotate(90deg);
-        }
+    .dark .theme-toggle-icon.moon {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
 
-        .theme-toggle::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.4s ease, height 0.4s ease;
-        }
+    .theme-toggle::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.4s ease, height 0.4s ease;
+    }
 
-        .theme-toggle:active::before {
-            width: 80px;
-            height: 80px;
-        }
+    .theme-toggle:active::before {
+        width: 80px;
+        height: 80px;
+    }
 
-        .language-selector {
-            position: relative;
-            display: inline-block;
-        }
+    .language-selector {
+        position: relative;
+        display: inline-block;
+    }
 
-        .language-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: var(--bg-secondary);
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            padding: 0.5rem 0;
-            min-width: 120px;
-            z-index: 50;
+    .language-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--bg-secondary);
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        padding: 0.5rem 0;
+        min-width: 120px;
+        z-index: 60;
+        display: none;
+    }
+
+    .language-selector:hover .language-dropdown {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .language-selector:hover .language-dropdown {
             display: none;
         }
-
-        .language-selector:hover .language-dropdown {
+        .language-selector.active .language-dropdown {
             display: block;
         }
+    }
 
-        @media (max-width: 768px) {
-            .language-selector:hover .language-dropdown {
-                display: none;
-            }
-            .language-selector.active .language-dropdown {
-                display: block;
-            }
-        }
+    .language-option {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
 
-        .language-option {
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+    .language-option:hover {
+        background-color: rgba(75, 85, 99, 0.1);
+    }
 
-        .language-option:hover {
-            background-color: rgba(75, 85, 99, 0.1);
-        }
+    #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
 
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            overflow: hidden;
-        }
+    .light .text-blue-400 {
+        color: #3b82f6;
+    }
 
-        .light .text-blue-400 {
-            color: #3b82f6;
-        }
+    .light .mobile-menu {
+        border-left: 1px solid rgba(229, 231, 235, 0.8);
+    }
 
-        .light .mobile-menu {
-            border-left: 1px solid rgba(229, 231, 235, 0.8);
-        }
+    .light .nav-link, .light .mobile-menu-item {
+        color: #4b5563;
+    }
 
-        .light .nav-link, .light .mobile-menu-item {
-            color: #4b5563;
-        }
+    .light .nav-link:hover, .light .mobile-menu-item:hover {
+        color: #111827;
+    }
 
-        .light .nav-link:hover, .light .mobile-menu-item:hover {
-            color: #111827;
-        }
+    .about-section {
+        background-color: var(--about-bg-dark);
+        position: relative;
+        overflow: hidden;
+        padding: 5rem 1rem;
+    }
 
-        .about-section {
-            background-color: var(--about-bg-dark);
-            position: relative;
-            overflow: hidden;
-            padding: 5rem 1rem;
-        }
+    .about-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(rgba(56, 178, 172, 0.05) 2px, transparent 2px),
+            linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px);
+        background-size: 20px 20px;
+        pointer-events: none;
+    }
 
-        .about-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(rgba(56, 178, 172, 0.05) 2px, transparent 2px),
-                linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px);
-            background-size: 20px 20px;
-            pointer-events: none;
-        }
+    .about-title {
+        color: var(--about-accent);
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
 
-        .about-title {
-            color: var(--about-accent);
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+    .about-card-container {
+        background-color: var(--about-card-dark);
+        border-radius: 1rem;
+        padding: 2.5rem;
+        max-width: 900px;
+        margin: 0 auto;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
 
-        .about-card-container {
-            background-color: var(--about-card-dark);
-            border-radius: 1rem;
-            padding: 2.5rem;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
+    .about-subtitle {
+        color: var(--about-accent);
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 
-        .about-subtitle {
-            color: var(--about-accent);
-            font-size: 1.5rem;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+    .about-stats {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
 
+    @media (min-width: 640px) {
         .about-stats {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(3, 1fr);
         }
+    }
 
-        @media (min-width: 640px) {
-            .about-stats {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+    .about-stat-card {
+        background-color: var(--about-stat-bg);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .about-stat-card {
-            background-color: var(--about-stat-bg);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .about-stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
 
-        .about-stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        }
+    .about-stat-label {
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
 
-        .about-stat-label {
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-            margin-bottom: 0.5rem;
-        }
+    .about-stat-value {
+        color: var(--about-accent);
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        background: linear-gradient(to right, var(--about-accent), var(--about-accent-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 
-        .about-stat-value {
-            color: var(--about-accent);
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-            background: linear-gradient(to right, var(--about-accent), var(--about-accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    .about-text {
+        color: var(--text-primary);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
 
-        .about-text {
-            color: var(--text-primary);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
+    .about-highlight {
+        color: var(--about-accent);
+        font-weight: 500;
+    }
 
-        .about-highlight {
-            color: var(--about-accent);
-            font-weight: 500;
-        }
+    .about-link-button {
+        background: linear-gradient(to right, var(--about-accent), var(--about-accent-secondary));
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1rem auto 0;
+        display: block;
+        width: fit-content;
+    }
 
-        .about-link-button {
-            background: linear-gradient(to right, var(--about-accent), var(--about-accent-secondary));
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 1rem auto 0;
-            display: block;
-            width: fit-content;
-        }
+    .about-link-button:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(56, 178, 172, 0.3);
+    }
 
-        .about-link-button:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(56, 178, 172, 0.3);
-        }
+    .counter-animation {
+        display: inline-block;
+        position: relative;
+    178,172,0.3);
+    }
 
-        .counter-animation {
-            display: inline-block;
-            position: relative;
-        }
+    .counter-animation {
+        display: inline-block;
+        position: relative;
+    }
 
-        @keyframes countUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+    @keyframes countUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
         }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
-        .counter-animation.animated {
-            animation: countUp 2s ease-out forwards;
-        }
+    .counter-animation.animated {
+        animation: countUp 2s ease-out forwards;
+    }
 
-        .light .about-section {
-            background-color: var(--bg-primary-light);
-        }
+    .light .about-section {
+        background-color: var(--bg-primary-light);
+    }
 
-        .light .about-card-container {
-            background-color: var(--bg-secondary-light);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
+    .light .about-card-container {
+        background-color: var(--bg-secondary-light);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
 
-        .light .about-title,
-        .light .about-subtitle,
-        .light .about-highlight {
-            color: #3b82f6;
-        }
+    .light .about-title,
+    .light .about-subtitle,
+    .light .about-highlight {
+        color: #3b82f6;
+    }
 
-        .light .about-stat-card {
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
+    .light .about-stat-card {
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
 
-        .light .about-text {
-            color: var(--text-primary-light);
-        }
+    .light .about-text {
+        color: var(--text-primary-light);
+    }
 
-        .light .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border-color: rgba(59, 130, 246, 0.3);
-            background-color: rgba(249, 250, 251, 0.8);
-        }
+    .light .skill-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        border-color: rgba(59, 130, 246, 0.3);
+        background-color: rgba(249, 250, 251, 0.8);
+    }
 
-        .light .skill-card::before {
-            background: linear-gradient(45deg, rgba(59, 130, 246, 0.05), rgba(79, 70, 229, 0.05));
-        }
+    .light .skill-card::before {
+        background: linear-gradient(45deg, rgba(59, 130, 246, 0.05), rgba(79, 70, 229, 0.05));
+    }
 
-        /* Scroll buttons for skills */
-        .scroll-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--bg-secondary);
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border: 1px solid rgba(75, 85, 99, 0.3);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
+    /* Scroll buttons for skills */
+    .scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid rgba(75, 85, 99, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
 
-        .scroll-btn:hover {
-            background-color: var(--bg-primary);
-            transform: translateY(-50%) scale(1.1);
-        }
+    .scroll-btn:hover {
+        background-color: var(--bg-primary);
+        transform: translateY(-50%) scale(1.1);
+    }
 
-        .scroll-btn-left {
-            left: 10px;
-        }
+    .scroll-btn-left {
+        left: 10px;
+    }
 
-        .scroll-btn-right {
-            right: 10px;
-        }
+    .scroll-btn-right {
+        right: 10px;
+    }
 
-        .light .scroll-btn {
-            background-color: #f3f4f6;
-            color: #4b5563;
-            border: 1px solid rgba(229, 231, 235, 0.8);
-        }
+    .light .scroll-btn {
+        background-color: #f3f4f6;
+        color: #4b5563;
+        border: 1px solid rgba(229, 231, 235, 0.8);
+    }
 
-        .light .scroll-btn:hover {
-            background-color: #e5e7eb;
-            color: #111827;
-        }
-    </style>
+    .light .scroll-btn:hover {
+        background-color: #e5e7eb;
+        color: #111827;
+    }
+</style>
 </head>
 
 <body class="bg-gray-900 text-white">
-    <nav class="fixed w-full z-50 enhanced-header">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <svg width="40" height="40" viewBox="0 0 100 100" class="logo-animation">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#4ade80" />
-                                <stop offset="100%" style="stop-color:#3b82f6" />
-                            </linearGradient>
-                        </defs>
-                        <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="url(#logoGradient)" />
-                        <path d="M30 65 L30 35 L50 55 L70 35 L70 65" stroke="white" stroke-width="4" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2.5s" fill="freeze" />
-                        </path>
-                    </svg>
-                    <span class="ml-2 text-lg font-semibold hidden sm:block">Matheus Felix</span>
-                </div>
+<nav class="fixed w-full z-50 enhanced-header">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <svg width="40" height="40" viewBox="0 0 100 100" class="logo-animation">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4ade80" />
+                            <stop offset="100%" style="stop-color:#3b82f6" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="url(#logoGradient)" />
+                    <path d="M30 65 L30 35 L50 55 L70 35 L70 65" stroke="white" stroke-width="4" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <animate attributeName="stroke-dasharray" from="0,200" to="200,0" dur="2.5s" fill="freeze" />
+                    </path>
+                </svg>
+                <span class="ml-2 text-lg font-semibold hidden sm:block">Matheus Felix</span>
+            </div>
 
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Home" data-pt="Início">Home</a>
-                    <a href="#about" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="About" data-pt="Sobre">About</a>
-                    <a href="#certificates" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Certificates" data-pt="Certificados">Certificates</a>
-                    <a href="#projects" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Projects" data-pt="Projetos">Projects</a>
-                    <a href="#skills" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Skills" data-pt="Habilidades">Skills</a>
-                    
-                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                        <i class="fas fa-sun theme-toggle-icon sun"></i>
-                        <i class="fas fa-moon theme-toggle-icon moon"></i>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Home" data-pt="Início">Home</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="About" data-pt="Sobre">About</a>
+                <a href="#certificates" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Certificates" data-pt="Certificados">Certificates</a>
+                <a href="#projects" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Projects" data-pt="Projetos">Projects</a>
+                <a href="#skills" class="nav-link text-gray-300 hover:text-white transition-colors" data-en="Skills" data-pt="Habilidades">Skills</a>
+                
+                <button class="theme-toggle desktop-theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun theme-toggle-icon sun"></i>
+                    <i class="fas fa-moon theme-toggle-icon moon"></i>
+                </button>
+                
+                <div class="language-selector desktop-language-selector">
+                    <button class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-language">EN</span>
                     </button>
-                    
-                    <div class="language-selector">
-                        <button class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                            <i class="fas fa-globe"></i>
-                            <span id="current-language">EN</span>
-                        </button>
-                        <div class="language-dropdown">
-                            <div class="language-option" data-lang="en">
-                                <span>English</span>
-                            </div>
-                            <div class="language-option" data-lang="pt">
-                                <span>Português</span>
-                            </div>
+                    <div class="language-dropdown">
+                        <div class="language-option" data-lang="en">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" data-lang="pt">
+                            <span>Português</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="md:hidden flex items-center space-x-4">
-                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                        <i class="fas fa-sun theme-toggle-icon sun"></i>
-                        <i class="fas fa-moon theme-toggle-icon moon"></i>
-                    </button>
-                    
-                    <div class="language-selector">
-                        <button class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors language-toggle">
-                            <i class="fas fa-globe"></i>
-                        </button>
-                        <div class="language-dropdown">
-                            <div class="language-option" data-lang="en">
-                                <span>English</span>
-                            </div>
-                            <div class="language-option" data-lang="pt">
-                                <span>Português</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button id="menu-toggle" class="p-2 rounded-lg hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
                 </div>
             </div>
-        </div>
-    </nav>
 
-    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden menu-backdrop"></div>
-
-    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-full sm:w-80 bg-gray-900 z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl border-l border-gray-800">
-        <div class="flex flex-col h-full p-6">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-xl font-bold gradient-text">Menu</h2>
-                <button id="close-menu" class="p-2 hover:bg-gray-800 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+            <div class="md:hidden flex items-center space-x-4">
+                <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun theme-toggle-icon sun"></i>
+                    <i class="fas fa-moon theme-toggle-icon moon"></i>
+                </button>
+                
+                <div class="language-selector mobile-language-selector">
+                    <button class="flex items-center gap-2 text-gray-300 hover:text-white transition-colors language-toggle">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <div class="language-dropdown">
+                        <div class="language-option" data-lang="en">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" data-lang="pt">
+                            <span>Português</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="menu-toggle" class="p-2 rounded-lg hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
-            </div>
-            <div class="flex flex-col">
-                <a href="#home" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Home" data-pt="Início">Home</a>
-                <a href="#about" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="About" data-pt="Sobre">About</a>
-                <a href="#certificates" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Certificates" data-pt="Certificados">Certificates</a>
-                <a href="#projects" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Projects" data-pt="Projetos">Projects</a>
-                <a href="#skills" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Skills" data-pt="Habilidades">Skills</a>
             </div>
         </div>
     </div>
+</nav>
 
-    <section id="home" class="hero-section flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 circuit-bg">
-        <div id="particles-js" class="absolute inset-0 z-0"></div>
-        <div class="container mx-auto px-6 py-20 text-center relative z-10">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 hero-content">
-                <div class="md:order-2 md:w-1/3">
-                    <div class="profile-image-container relative w-56 h-56 sm:w-64 sm:h-64 mx-auto">
-                        <div class="profile-image-glow"></div>
-                        <div class="relative w-full h-full rounded-full p-1 bg-gradient-to-r from-green-400 to-blue-500">
-                            <div class="w-full h-full rounded-full overflow-hidden bg-gray-900 p-2">
-                                <img src="./assets/img/foto.jpg" alt="Matheus Felix" class="w-full h-full object-cover rounded-full shadow-2xl">
-                            </div>
+<div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden menu-backdrop"></div>
+
+<div id="mobile-menu" class="fixed top-0 right-0 h-full w-full sm:w-80 bg-gray-900 z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl border-l border-gray-800">
+    <div class="flex flex-col h-full p-6">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-xl font-bold gradient-text">Menu</h2>
+            <button id="close-menu" class="p-2 hover:bg-gray-800 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col">
+            <a href="#home" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Home" data-pt="Início">Home</a>
+            <a href="#about" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="About" data-pt="Sobre">About</a>
+            <a href="#certificates" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Certificates" data-pt="Certificados">Certificates</a>
+            <a href="#projects" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Projects" data-pt="Projetos">Projects</a>
+            <a href="#skills" class="mobile-menu-item text-gray-300 hover:text-white transition-colors" data-en="Skills" data-pt="Habilidades">Skills</a>
+        </div>
+    </div>
+</div>
+
+<section id="home" class="hero-section flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 circuit-bg">
+    <div id="particles-js" class="absolute inset-0 z-0"></div>
+    <div class="container mx-auto px-6 py-20 text-center relative z-10">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 hero-content">
+            <div class="md:order-2 md:w-1/3">
+                <div class="profile-image-container relative w-56 h-56 sm:w-64 sm:h-64 mx-auto">
+                    <div class="profile-image-glow"></div>
+                    <div class="relative w-full h-full rounded-full p-1 bg-gradient-to-r from-green-400 to-blue-500">
+                        <div class="w-full h-full rounded-full overflow-hidden bg-gray-900 p-2">
+                            <img src="./assets/img/foto.jpg" alt="Matheus Felix" class="w-full h-full object-cover rounded-full shadow-2xl">
                         </div>
                     </div>
                 </div>
-                <div class="md:order-1 text-center md:text-left md:w-1/2">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                        <span data-en="Hi, I'm" data-pt="Olá, eu sou">Hi, I'm</span> <span class="gradient-text">Matheus</span>
-                    </h1>
-                    <p class="text-xl text-gray-300 mb-8 max-w-lg mx-auto md:mx-0" data-en="Front-End Developer and UX/UI specialist crafting elegant and functional digital solutions." data-pt="Desenvolvedor Front-End e especialista em UX/UI criando soluções digitais elegantes e funcionais.">
-                        Front-End Developer and UX/UI specialist crafting elegant and functional digital solutions.
-                    </p>
-                    <div class="flex flex-wrap gap-4 hero-buttons">
-                        <a href="#projects" class="primary-button">
-                            <span data-en="View My Work" data-pt="Ver Meus Projetos">View My Work</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <a href="./assets/img/curriculo-matheus_felix.pdf" target="_blank" class="secondary-button" >
-                            <span data-en="Download Resume" data-pt="Baixar Currículo">Download Resume</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
+            </div>
+            <div class="md:order-1 text-center md:text-left md:w-1/2">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                    <span data-en="Hi, I'm" data-pt="Olá, eu sou">Hi, I'm</span> <span class="gradient-text">Matheus</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 max-w-lg mx-auto md:mx-0" data-en="Front-End Developer and UX/UI specialist crafting elegant and functional digital solutions." data-pt="Desenvolvedor Front-End e especialista em UX/UI criando soluções digitais elegantes e funcionais.">
+                    Front-End Developer and UX/UI specialist crafting elegant and functional digital solutions.
+                </p>
+                <div class="flex flex-wrap gap-4 hero-buttons">
+                    <a href="#projects" class="primary-button">
+                        <span data-en="View My Work" data-pt="Ver Meus Projetos">View My Work</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="./assets/img/curriculo-matheus_felix.pdf" target="_blank" class="secondary-button" >
+                        <span data-en="Download Resume" data-pt="Baixar Currículo">Download Resume</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="about" class="about-section">
-        <h2 class="about-title" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
+<section id="about" class="about-section">
+    <h2 class="about-title" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
+    
+    <div class="about-card-container">
+        <h3 class="about-subtitle" data-en="Front-End Developer & AI Specialist" data-pt="Desenvolvedor Front-End & Especialista em IA">Front-End Developer & AI Specialist</h3>
         
-        <div class="about-card-container">
-            <h3 class="about-subtitle" data-en="Front-End Developer & AI Specialist" data-pt="Desenvolvedor Front-End & Especialista em IA">Front-End Developer & AI Specialist</h3>
-            
-            <div class="about-stats">
-                <div class="about-stat-card">
-                    <div class="about-stat-label" data-en="Years of Experience" data-pt="Anos de Experiência">Years of Experience</div>
-                    <div class="about-stat-value counter-animation" data-target="4">0</div>
-                </div>
-                
-                <div class="about-stat-card">
-                    <div class="about-stat-label" data-en="Projects Completed" data-pt="Projetos Concluídos">Projects Completed</div>
-                    <div class="about-stat-value counter-animation" data-target="15">0</div>
-                </div>
-                
-                <div class="about-stat-card">
-                    <div class="about-stat-label" data-en="Satisfaction Rate" data-pt="Taxa de Satisfação">Satisfaction Rate</div>
-                    <div class="about-stat-value counter-animation" data-target="100">0</div>
-                </div>
+        <div class="about-stats">
+            <div class="about-stat-card">
+                <div class="about-stat-label" data-en="Years of Experience" data-pt="Anos de Experiência">Years of Experience</div>
+                <div class="about-stat-value counter-animation" data-target="4">0</div>
             </div>
             
-            <p class="about-text" data-en="Hi! I'm Matheus Felix, a Front-End Developer passionate about creating exceptional digital experiences that combine intuitive design with cutting-edge technology." data-pt="Olá! Eu sou Matheus Felix, um Desenvolvedor Front-End apaixonado por criar experiências digitais excepcionais que combinam design intuitivo com tecnologia de ponta.">
-                Hi! I'm <span class="about-highlight">Matheus Felix</span>, a Front-End Developer passionate about creating exceptional digital experiences that combine intuitive design with cutting-edge technology.
-            </p>
+            <div class="about-stat-card">
+                <div class="about-stat-label" data-en="Projects Completed" data-pt="Projetos Concluídos">Projects Completed</div>
+                <div class="about-stat-value counter-animation" data-target="15">0</div>
+            </div>
             
-            <p class="about-text" data-en="As a specialist in UX/UI and Artificial Intelligence, my goal is to develop innovative solutions that not only meet user needs but exceed their expectations. I work with modern technologies like Tailwind and JavaScript, always seeking to integrate best development practices with intelligent solutions." data-pt="Como especialista em UX/UI e Inteligência Artificial, meu objetivo é desenvolver soluções inovadoras que não apenas atendam às necessidades dos usuários, mas superem suas expectativas. Trabalho com tecnologias modernas como Tailwind e JavaScript, sempre buscando integrar as melhores práticas de desenvolvimento com soluções inteligentes.">
-                As a specialist in <span class="about-highlight">UX/UI</span> and <span class="about-highlight">Artificial Intelligence</span>, my goal is to develop innovative solutions that not only meet user needs but exceed their expectations. I work with modern technologies like <span class="about-highlight">Tailwind</span> and <span class="about-highlight">JavaScript</span>, always seeking to integrate best development practices with intelligent solutions.
-            </p>
-            
-            <a href="https://www.linkedin.com/in/matheus-fl" target="_blank" class="about-link-button" >
-                <span data-en="Access LinkedIn" data-pt="Acessar LinkedIn">Access LinkedIn</span>
-                <i class="fab fa-linkedin ml-2"></i>
-            </a>
-        </div>
-    </section>
-
-    <section id="certificates" class="py-20 bg-gray-800">
-        <div class="container-medium px-6 mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-6 gradient-text" data-en="Certifications" data-pt="Certificações">Certifications</h2>
-            <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto" data-en="Professional certifications and achievements that demonstrate my expertise and continuous learning" data-pt="Certificações profissionais e conquistas que demonstram minha experiência e aprendizado contínuo">Professional certifications and achievements that demonstrate my expertise and continuous learning</p>
-
-            <div class="certificate-grid">
-                <div class="certificate-card card-hover">
-                    <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/google.jpg" alt="Google" class="h-10 rounded-md certificate-logo">
-                        <span class="text-gray-400 text-sm">2025</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Google UX Design</h3>
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/6SM7NEAJGBFX" target="_blank" class="certificate-link">
-                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="certificate-card card-hover">
-                    <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/google.jpg" alt="Google" class="h-10 rounded-md certificate-logo">
-                        <span class="text-gray-400 text-sm">2025</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Google IA produtiva</h3>
-                    <a href="https://postimg.cc/s11g6p8n" target="_blank" class="certificate-link">
-                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="certificate-card card-hover">
-                    <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/ie_university_logo.jpg" alt="IE University" class="h-10 rounded-md certificate-logo">
-                        <span class="text-gray-400 text-sm">2025</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Introdução à Ciência de Dados</h3>
-                    <a href="https://postimg.cc/ZvLHvGSc" target="_blank" class="certificate-link">
-                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="certificate-card card-hover">
-                    <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/udemy_logo.jpg" alt="Udemy" class="h-10 rounded-md certificate-logo">
-                        <span class="text-gray-400 text-sm">2025</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">React</h3>
-                    <a href="https://www.udemy.com/certificate/UC-774cf64b-d149-4b7b-aa59-95506289d1d9" target="_blank" class="certificate-link">
-                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="certificate-card card-hover">
-                    <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/aluracursos_logo.jpg" alt="Alura" class="h-10 rounded-md certificate-logo">
-                        <span class="text-gray-400 text-sm">2025</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Imersão Front-End 2ª Edição</h3>
-                    <a href="https://cursos.alura.com.br/immersion/certificate/121af83a-9fdc-406b-8abf-54e404e57227?lang=pt_BR" target="_blank" class="certificate-link">
-                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="certificate-card card-hover">
-                    <div class="flex items-center justify-between mb-6">
-                        <img src="./assets/img/logo-dio.svg" alt="DIO" class="h-10 rounded-md certificate-logo">
-                        <span class="text-gray-400 text-sm">2025</span>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Integração API</h3>
-                    <a href="https://hermes.dio.me/certificates/EDIKMHDY.pdf" target="_blank" class="certificate-link">
-                        <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                </div>
+            <div class="about-stat-card">
+                <div class="about-stat-label" data-en="Satisfaction Rate" data-pt="Taxa de Satisfação">Satisfaction Rate</div>
+                <div class="about-stat-value counter-animation" data-target="100">0</div>
             </div>
         </div>
-    </section>
+        
+        <p class="about-text" data-en="Hi! I'm Matheus Felix, a Front-End Developer passionate about creating exceptional digital experiences that combine intuitive design with cutting-edge technology." data-pt="Olá! Eu sou Matheus Felix, um Desenvolvedor Front-End apaixonado por criar experiências digitais excepcionais que combinam design intuitivo com tecnologia de ponta.">
+            Hi! I'm <span class="about-highlight">Matheus Felix</span>, a Front-End Developer passionate about creating exceptional digital experiences that combine intuitive design with cutting-edge technology.
+        </p>
+        
+        <p class="about-text" data-en="As a specialist in UX/UI and Artificial Intelligence, my goal is to develop innovative solutions that not only meet user needs but exceed their expectations. I work with modern technologies like Tailwind and JavaScript, always seeking to integrate best development practices with intelligent solutions." data-pt="Como especialista em UX/UI e Inteligência Artificial, meu objetivo é desenvolver soluções inovadoras que não apenas atendam às necessidades dos usuários, mas superem suas expectativas. Trabalho com tecnologias modernas como Tailwind e JavaScript, sempre buscando integrar as melhores práticas de desenvolvimento com soluções inteligentes.">
+            As a specialist in <span class="about-highlight">UX/UI</span> and <span class="about-highlight">Artificial Intelligence</span>, my goal is to develop innovative solutions that not only meet user needs but exceed their expectations. I work with modern technologies like <span class="about-highlight">Tailwind</span> and <span class="about-highlight">JavaScript</span>, always seeking to integrate best development practices with intelligent solutions.
+        </p>
+        
+        <a href="https://www.linkedin.com/in/matheus-fl" target="_blank" class="about-link-button" >
+            <span data-en="Access LinkedIn" data-pt="Acessar LinkedIn">Access LinkedIn</span>
+            <i class="fab fa-linkedin ml-2"></i>
+        </a>
+    </div>
+</section>
 
-    <section id="projects" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4 sm:px-6">
-            <h2 class="text-3xl font-bold text-center mb-6 gradient-text" data-en="Featured Projects" data-pt="Projetos em Destaque">Featured Projects</h2>
-            <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto" data-en="A selection of my recent work showcasing my skills in front-end development, UX/UI design, and problem-solving." data-pt="Uma seleção dos meus trabalhos recentes que demonstram minhas habilidades em desenvolvimento front-end, design UX/UI e resolução de problemas.">A selection of my recent work showcasing my skills in front-end development, UX/UI design, and problem-solving.</p>
+<section id="certificates" class="py-20 bg-gray-800">
+    <div class="container-medium px-6 mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-6 gradient-text" data-en="Certifications" data-pt="Certificações">Certifications</h2>
+        <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto" data-en="Professional certifications and achievements that demonstrate my expertise and continuous learning" data-pt="Certificações profissionais e conquistas que demonstram minha experiência e aprendizado contínuo">Professional certifications and achievements that demonstrate my expertise and continuous learning</p>
 
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-image-container">
-                        <img src="./assets/img/portal_salaberga.png" alt="School Portal" class="project-image" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">School Portal</h3>
-                        <p class="text-gray-400 text-sm mb-4" data-en="This system provides an efficient platform for managing school operations, including Registration, Login, and various subsystems. It offers access to News, Location, Partnerships, History, and Events." data-pt="Este sistema fornece uma plataforma eficiente para gerenciar operações escolares, incluindo Registro, Login e vários subsistemas. Oferece acesso a Notícias, Localização, Parcerias, História e Eventos.">This system provides an efficient platform for managing school operations, including Registration, Login, and various subsystems. It offers access to News, Location, Partnerships, History, and Events.</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/Portal-Stgm" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
-                                    <i class="fab fa-github text-xl"></i>
-                                </a>
-                            </div>
-                            <a href="https://salaberga.com" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
-                                <span data-en="View Live" data-pt="Ver Online">View Live</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+        <div class="certificate-grid">
+            <div class="certificate-card card-hover">
+                <div class="flex items-center justify-between mb-6">
+                    <img src="./assets/img/google.jpg" alt="Google" class="h-10 rounded-md certificate-logo">
+                    <span class="text-gray-400 text-sm">2025</span>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">Google UX Design</h3>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/6SM7NEAJGBFX" target="_blank" class="certificate-link">
+                    <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
 
-                <article class="project-card">
-                    <div class="project-image-container">
-                        <img src="./assets/img/sonar.PNG" alt="Sonar Music" class="project-image" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Sonar Music</h3>
-                        <p class="text-gray-400 text-sm mb-4" data-en="Welcome to Sonar Music, a music streaming platform developed exclusively for portfolio purposes. This project was created to showcase web development skills using a variety of modern technologies." data-pt="Bem-vindo ao Sonar Music, uma plataforma de streaming de música desenvolvida exclusivamente para fins de portfólio. Este projeto foi criado para demonstrar habilidades de desenvolvimento web usando uma variedade de tecnologias modernas.">Welcome to Sonar Music, a music streaming platform developed exclusively for portfolio purposes. This project was created to showcase web development skills using a variety of modern technologies.</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/SonarMusic" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
-                                    <i class="fab fa-github text-xl"></i>
-                                </a>
-                            </div>
-                            <a href="http://sonar.infinityfreeapp.com/app/main/index.php" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
-                                <span data-en="View Live" data-pt="Ver Online">View Live</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <div class="certificate-card card-hover">
+                <div class="flex items-center justify-between mb-6">
+                    <img src="./assets/img/google.jpg" alt="Google" class="h-10 rounded-md certificate-logo">
+                    <span class="text-gray-400 text-sm">2025</span>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">Google IA produtiva</h3>
+                <a href="https://postimg.cc/s11g6p8n" target="_blank" class="certificate-link">
+                    <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
 
-                <article class="project-card">
-                    <div class="project-image-container">
-                        <img src="./assets/img/listday.png" alt="List Day" class="project-image" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">List Day</h3>
-                        <p class="text-gray-400 text-sm mb-4" data-en="List of the Day is a curated selection of daily items, tips, or recommendations, presented in an organized and engaging format. It can be used in productivity apps, e-commerce platforms, blogs, or content websites." data-pt="Lista do Dia é uma seleção curada de itens diários, dicas ou recomendações, apresentados em um formato organizado e envolvente. Pode ser usado em aplicativos de produtividade, plataformas de e-commerce, blogs ou sites de conteúdo.">List of the Day is a curated selection of daily items, tips, or recommendations, presented in an organized and engaging format. It can be used in productivity apps, e-commerce platforms, blogs, or content websites.</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/list_of_the_day" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
-                                    <i class="fab fa-github text-xl"></i>
-                                </a>
-                            </div>
-                            <a href="https://listday.infinityfreeapp.com" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
-                                <span data-en="View Live" data-pt="Ver Online">View Live</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <div class="certificate-card card-hover">
+                <div class="flex items-center justify-between mb-6">
+                    <img src="./assets/img/ie_university_logo.jpg" alt="IE University" class="h-10 rounded-md certificate-logo">
+                    <span class="text-gray-400 text-sm">2025</span>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">Introdução à Ciência de Dados</h3>
+                <a href="https://postimg.cc/ZvLHvGSc" target="_blank" class="certificate-link">
+                    <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
 
-                <article class="project-card">
-                    <div class="project-image-container">
-                        <img src="./assets/img/Capturar.PNG" alt="Felix Restaurant" class="project-image" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Felix Restaurant</h3>
-                        <p class="text-gray-400 text-sm mb-4" data-en="In this project, I designed and implemented a comprehensive purchase and reservation system as a tribute to my skills and dedication. This system streamlines the entire process and generates a detailed PDF receipt at the end of each transaction." data-pt="Neste projeto, projetei e implementei um sistema abrangente de compra e reserva como um tributo às minhas habilidades e dedicação. Este sistema simplifica todo o processo e gera um recibo PDF detalhado ao final de cada transação.">In this project, I designed and implemented a comprehensive purchase and reservation system as a tribute to my skills and dedication. This system streamlines the entire process and generates a detailed PDF receipt at the end of each transaction.</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/Felix-Restaurant" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
-                                    <i class="fab fa-github text-xl"></i>
-                                </a>
-                            </div>
-                            <a href="https://restfelix.netlify.app/" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
-                                <span data-en="View Live" data-pt="Ver Online">View Live</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <div class="certificate-card card-hover">
+                <div class="flex items-center justify-between mb-6">
+                    <img src="./assets/img/udemy_logo.jpg" alt="Udemy" class="h-10 rounded-md certificate-logo">
+                    <span class="text-gray-400 text-sm">2025</span>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">React</h3>
+                <a href="https://www.udemy.com/certificate/UC-774cf64b-d149-4b7b-aa59-95506289d1d9" target="_blank" class="certificate-link">
+                    <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
 
-                <article class="project-card">
-                    <div class="project-image-container">
-                        <img src="./assets/img/vortex.PNG" alt="VortexFit" class="project-image" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">VortexFit</h3>
-                        <p class="text-gray-400 text-sm mb-4" data-en="Welcome to VortexFit, the ultimate solution for workout management and gym support! Built with React, Vite, and Tailwind CSS, this project is a modern, agile, and fully functional web application designed for both students and administrators." data-pt="Bem-vindo ao VortexFit, a solução definitiva para gerenciamento de treinos e suporte de academia! Construído com React, Vite e Tailwind CSS, este projeto é uma aplicação web moderna, ágil e totalmente funcional projetada para estudantes e administradores.">Welcome to VortexFit, the ultimate solution for workout management and gym support! Built with React, Vite, and Tailwind CSS, this project is a modern, agile, and fully functional web application designed for both students and administrators.</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/VortexFit" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
-                                    <i class="fab fa-github text-xl"></i>
-                                </a>
-                            </div>
-                            <a href="https://github.com/mthfl/VortexFit" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
-                                <span data-en="View Code" data-pt="Ver Código">View Code</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <div class="certificate-card card-hover">
+                <div class="flex items-center justify-between mb-6">
+                    <img src="./assets/img/aluracursos_logo.jpg" alt="Alura" class="h-10 rounded-md certificate-logo">
+                    <span class="text-gray-400 text-sm">2025</span>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">Imersão Front-End 2ª Edição</h3>
+                <a href="https://cursos.alura.com.br/immersion/certificate/121af83a-9fdc-406b-8abf-54e404e57227?lang=pt_BR" target="_blank" class="certificate-link">
+                    <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
 
-                <article class="project-card">
-                    <div class="project-image-container">
-                        <img src="./assets/img/search.PNG" alt="SearchShots" class="project-image" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">SearchShots</h3>
-                        <p class="text-gray-400 text-sm mb-4" data-en="A free photo search tool using the Unsplash API" data-pt="Uma ferramenta gratuita de busca de fotos usando a API do Unsplash">A free photo search tool using the Unsplash API</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-4">
-                                <a href="https://github.com/mthfl/SearchShots" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
-                                    <i class="fab fa-github text-xl"></i>
-                                </a>
-                            </div>
-                            <a href="https://mthfl.github.io/SearchShots/" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
-                                <span data-en="View Live" data-pt="Ver Online">View Live</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <div class="certificate-card card-hover">
+                <div class="flex items-center justify-between mb-6">
+                    <img src="./assets/img/logo-dio.svg" alt="DIO" class="h-10 rounded-md certificate-logo">
+                    <span class="text-gray-400 text-sm">2025</span>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">Integração API</h3>
+                <a href="https://hermes.dio.me/certificates/EDIKMHDY.pdf" target="_blank" class="certificate-link">
+                    <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="py-20 bg-gray-800" id="skills">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-10 gradient-text" data-en="My Skills" data-pt="Minhas Habilidades">My Skills</h2>
-            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto" data-en="Technologies and tools I use to bring products to life" data-pt="Tecnologias e ferramentas que uso para dar vida aos produtos">Technologies and tools I use to bring products to life</p>
+<section id="projects" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl font-bold text-center mb-6 gradient-text" data-en="Featured Projects" data-pt="Projetos em Destaque">Featured Projects</h2>
+        <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto" data-en="A selection of my recent work showcasing my skills in front-end development, UX/UI design, and problem-solving." data-pt="Uma seleção dos meus trabalhos recentes que demonstram minhas habilidades em desenvolvimento front-end, design UX/UI e resolução de problemas.">A selection of my recent work showcasing my skills in front-end development, UX/UI design, and problem-solving.</p>
 
-            <div class="relative">
-                <button class="scroll-btn scroll-btn-left" id="scroll-left">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <div class="overflow-x-auto scrollbar-hide scroll-smooth" id="skills-container">
-                    <div class="flex gap-6 md:gap-8 min-w-max px-4 py-6">
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/html5/html5-original.svg" class="w-16 h-16 skill-icon" alt="HTML5" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">HTML5</span>
-                            </div>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-image-container">
+                    <img src="./assets/img/portal_salaberga.png" alt="School Portal" class="project-image" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">School Portal</h3>
+                    <p class="text-gray-400 text-sm mb-4" data-en="This system provides an efficient platform for managing school operations, including Registration, Login, and various subsystems. It offers access to News, Location, Partnerships, History, and Events." data-pt="Este sistema fornece uma plataforma eficiente para gerenciar operações escolares, incluindo Registro, Login e vários subsistemas. Oferece acesso a Notícias, Localização, Parcerias, História e Eventos.">This system provides an efficient platform for managing school operations, including Registration, Login, and various subsystems. It offers access to News, Location, Partnerships, History, and Events.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <a href="https://github.com/mthfl/Portal-Stgm" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
                         </div>
+                        <a href="https://salaberga.com" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
+                            <span data-en="View Live" data-pt="Ver Online">View Live</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/css3/css3-original.svg" class="w-16 h-16 skill-icon" alt="CSS3" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">CSS3</span>
-                            </div>
+            <article class="project-card">
+                <div class="project-image-container">
+                    <img src="./assets/img/sonar.PNG" alt="Sonar Music" class="project-image" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">Sonar Music</h3>
+                    <p class="text-gray-400 text-sm mb-4" data-en="Welcome to Sonar Music, a music streaming platform developed exclusively for portfolio purposes. This project was created to showcase web development skills using a variety of modern technologies." data-pt="Bem-vindo ao Sonar Music, uma plataforma de streaming de música desenvolvida exclusivamente para fins de portfólio. Este projeto foi criado para demonstrar habilidades de desenvolvimento web usando uma variedade de tecnologias modernas.">Welcome to Sonar Music, a music streaming platform developed exclusively for portfolio purposes. This project was created to showcase web development skills using a variety of modern technologies.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <a href="https://github.com/mthfl/SonarMusic" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
                         </div>
+                        <a href="http://sonar.infinityfreeapp.com/app/main/index.php" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
+                            <span data-en="View Live" data-pt="Ver Online">View Live</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/javascript/javascript-original.svg" class="w-16 h-16 skill-icon" alt="JavaScript" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">JavaScript</span>
-                            </div>
+            <article class="project-card">
+                <div class="project-image-container">
+                    <img src="./assets/img/listday.png" alt="List Day" class="project-image" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">List Day</h3>
+                    <p class="text-gray-400 text-sm mb-4" data-en="List of the Day is a curated selection of daily items, tips, or recommendations, presented in an organized and engaging format. It can be used in productivity apps, e-commerce platforms, blogs, or content websites." data-pt="Lista do Dia é uma seleção curada de itens diários, dicas ou recomendações, apresentados em um formato organizado e envolvente. Pode ser usado em aplicativos de produtividade, plataformas de e-commerce, blogs ou sites de conteúdo.">List of the Day is a curated selection of daily items, tips, or recommendations, presented in an organized and engaging format. It can be used in productivity apps, e-commerce platforms, blogs, or content websites.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <a href="https://github.com/mthfl/list_of_the_day" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
                         </div>
+                        <a href="https://listday.infinityfreeapp.com" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
+                            <span data-en="View Live" data-pt="Ver Online">View Live</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/tailwindcss/tailwindcss-original.svg" class="w-16 h-16 skill-icon" alt="Tailwind CSS" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">Tailwind CSS</span>
-                            </div>
+            <article class="project-card">
+                <div class="project-image-container">
+                    <img src="./assets/img/Capturar.PNG" alt="Felix Restaurant" class="project-image" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">Felix Restaurant</h3>
+                    <p class="text-gray-400 text-sm mb-4" data-en="In this project, I designed and implemented a comprehensive purchase and reservation system as a tribute to my skills and dedication. This system streamlines the entire process and generates a detailed PDF receipt at the end of each transaction." data-pt="Neste projeto, projetei e implementei um sistema abrangente de compra e reserva como um tributo às minhas habilidades e dedicação. Este sistema simplifica todo o processo e gera um recibo PDF detalhado ao final de cada transação.">In this project, I designed and implemented a comprehensive purchase and reservation system as a tribute to my skills and dedication. This system streamlines the entire process and generates a detailed PDF receipt at the end of each transaction.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <a href="https://github.com/mthfl/Felix-Restaurant" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
                         </div>
+                        <a href="https://restfelix.netlify.app/" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
+                            <span data-en="View Live" data-pt="Ver Online">View Live</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/bootstrap/bootstrap-original.svg" class="w-16 h-16 skill-icon" alt="Bootstrap" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">Bootstrap</span>
-                            </div>
+            <article class="project-card">
+                <div class="project-image-container">
+                    <img src="./assets/img/vortex.PNG" alt="VortexFit" class="project-image" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">VortexFit</h3>
+                    <p class="text-gray-400 text-sm mb-4" data-en="Welcome to VortexFit, the ultimate solution for workout management and gym support! Built with React, Vite, and Tailwind CSS, this project is a modern, agile, and fully functional web application designed for both students and administrators." data-pt="Bem-vindo ao VortexFit, a solução definitiva para gerenciamento de treinos e suporte de academia! Construído com React, Vite e Tailwind CSS, este projeto é uma aplicação web moderna, ágil e totalmente funcional projetada para estudantes e administradores.">Welcome to VortexFit, the ultimate solution for workout management and gym support! Built with React, Vite, and Tailwind CSS, this project is a modern, agile, and fully functional web application designed for both students and administrators.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <a href="https://github.com/mthfl/VortexFit" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
                         </div>
+                        <a href="https://github.com/mthfl/VortexFit" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
+                            <span data-en="View Code" data-pt="Ver Código">View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
 
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/react/react-original.svg" class="w-16 h-16 skill-icon" alt="React" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">React</span>
-                            </div>
+            <article class="project-card">
+                <div class="project-image-container">
+                    <img src="./assets/img/search.PNG" alt="SearchShots" class="project-image" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">SearchShots</h3>
+                    <p class="text-gray-400 text-sm mb-4" data-en="A free photo search tool using the Unsplash API" data-pt="Uma ferramenta gratuita de busca de fotos usando a API do Unsplash">A free photo search tool using the Unsplash API</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4">
+                            <a href="https://github.com/mthfl/SearchShots" target="_blank" class="text-green-500 hover:text-green-400 transition-colors" >
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
                         </div>
+                        <a href="https://mthfl.github.io/SearchShots/" target="_blank" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-green-500 to-blue-500 rounded-lg hover:opacity-90 transition-opacity" >
+                            <span data-en="View Live" data-pt="Ver Online">View Live</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
 
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/figma/figma-original.svg" class="w-16 h-16 skill-icon" alt="Figma" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">Figma</span>
-                            </div>
+<section class="py-20 bg-gray-800" id="skills">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10 gradient-text" data-en="My Skills" data-pt="Minhas Habilidades">My Skills</h2>
+        <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto" data-en="Technologies and tools I use to bring products to life" data-pt="Tecnologias e ferramentas que uso para dar vida aos produtos">Technologies and tools I use to bring products to life</p>
+
+        <div class="relative">
+            <button class="scroll-btn scroll-btn-left" id="scroll-left">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="overflow-x-auto scrollbar-hide scroll-smooth" id="skills-container">
+                <div class="flex gap-6 md:gap-8 min-w-max px-4 py-6">
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/html5/html5-original.svg" class="w-16 h-16 skill-icon" alt="HTML5" />
                         </div>
-
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/canva.svg" class="w-16 h-16 skill-icon" alt="Canva" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">Canva</span>
-                            </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">HTML5</span>
                         </div>
+                    </div>
 
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/git/git-original.svg" class="w-16 h-16 skill-icon" alt="Git" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">Git</span>
-                            </div>
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/css3/css3-original.svg" class="w-16 h-16 skill-icon" alt="CSS3" />
                         </div>
-
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/github/github-original.svg" class="w-16 h-16 skill-icon" alt="GitHub" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">GitHub</span>
-                            </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">CSS3</span>
                         </div>
+                    </div>
 
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/nodejs/nodejs-original.svg" class="w-16 h-16 skill-icon" alt="Node.js" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">Node.js</span>
-                            </div>
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/javascript/javascript-original.svg" class="w-16 h-16 skill-icon" alt="JavaScript" />
                         </div>
-
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/npm/npm-original-wordmark.svg" class="w-16 h-16 skill-icon" alt="NPM" />
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">NPM</span>
-                            </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">JavaScript</span>
                         </div>
+                    </div>
 
-                        <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
-                            <div class="w-full h-24 sm:h-28 flex items-center justify-center">
-                                <i class="fas fa-code-branch fa-3x text-blue-400 skill-icon"></i>
-                            </div>
-                            <div class="text-center mt-2">
-                                <span class="text-sm font-medium">API</span>
-                            </div>
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/tailwindcss/tailwindcss-original.svg" class="w-16 h-16 skill-icon" alt="Tailwind CSS" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">Tailwind CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/bootstrap/bootstrap-original.svg" class="w-16 h-16 skill-icon" alt="Bootstrap" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/react/react-original.svg" class="w-16 h-16 skill-icon" alt="React" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">React</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/figma/figma-original.svg" class="w-16 h-16 skill-icon" alt="Figma" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">Figma</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/canva.svg" class="w-16 h-16 skill-icon" alt="Canva" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">Canva</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/git/git-original.svg" class="w-16 h-16 skill-icon" alt="Git" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">Git</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/github/github-original.svg" class="w-16 h-16 skill-icon" alt="GitHub" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">GitHub</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/nodejs/nodejs-original.svg" class="w-16 h-16 skill-icon" alt="Node.js" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/npm/npm-original-wordmark.svg" class="w-16 h-16 skill-icon" alt="NPM" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">NPM</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <i class="fas fa-code-branch fa-3x text-blue-400 skill-icon"></i>
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">API</span>
                         </div>
                     </div>
                 </div>
-
-                <button class="scroll-btn scroll-btn-right" id="scroll-right">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
             </div>
-        </div>
-    </section>
 
-    <footer class="py-12 bg-gray-800 enhanced-footer">
-        <div class="container mx-auto px-6">
-            <div class="footer-content">
+            <button class="scroll-btn scroll-btn-right" id="scroll-right">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<footer class="py-12 bg-gray-800 enhanced-footer">
+    <div class="container mx-auto px-6">
+        <div class="footer-content">
+            <div class="mb-8 md:mb-0">
+                <div class="flex items-center mb-4">
+                    <svg width="40" height="40" viewBox="0 0 100 100" class="logo-animation mr-2">
+                        <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="url(#logoGradient)" />
+                        <path d="M30 65 L30 35 L50 55 L70 35 L70 65" stroke="white" stroke-width="4" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="text-lg font-semibold">Matheus Felix</span>
+                </div>
+                <p class="text-gray-400 max-w-xs" data-en="Front-End Developer crafting innovative and user-friendly digital experiences."
+                    data-pt="Desenvolvedor Front-End criando experiências digitais inovadoras e amigáveis.">
+                    Front-End Developer crafting innovative and user-friendly digital experiences.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row md:space-x-12">
                 <div class="mb-8 md:mb-0">
-                    <div class="flex items-center mb-4">
-                        <svg width="40" height="40" viewBox="0 0 100 100" class="logo-animation mr-2">
-                            <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" fill="url(#logoGradient)" />
-                            <path d="M30 65 L30 35 L50 55 L70 35 L70 65" stroke="white" stroke-width="4" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span class="text-lg font-semibold">Matheus Felix</span>
-                    </div>
-                    <p class="text-gray-400 max-w-xs" data-en="Front-End Developer crafting innovative and user-friendly digital experiences."
-                        data-pt="Desenvolvedor Front-End criando experiências digitais inovadoras e amigáveis.">
-                        Front-End Developer crafting innovative and user-friendly digital experiences.
-                    </p>
+                    <h3 class="text-lg font-semibold mb-4 gradient-text" data-en="Quick Links"
+                        data-pt="Links Rápidos">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors"
+                                data-en="Home" data-pt="Início">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors"
+                                data-en="About" data-pt="Sobre">About</a></li>
+                        <li><a href="#certificates"
+                                class="text-gray-400 hover:text-white transition-colors" data-en="Certificates"
+                                data-pt="Certificados">Certificates</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors"
+                                data-en="Projects" data-pt="Projetos">Projects</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors"
+                                data-en="Skills" data-pt="Habilidades">Skills</a></li>
+                    </ul>
                 </div>
-                <div class="flex flex-col md:flex-row md:space-x-12">
-                    <div class="mb-8 md:mb-0">
-                        <h3 class="text-lg font-semibold mb-4 gradient-text" data-en="Quick Links"
-                            data-pt="Links Rápidos">Quick Links</h3>
-                        <ul class="space-y-2">
-                            <li><a href="#home" class="text-gray-400 hover:text-white transition-colors"
-                                    data-en="Home" data-pt="Início">Home</a></li>
-                            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors"
-                                    data-en="About" data-pt="Sobre">About</a></li>
-                            <li><a href="#certificates"
-                                    class="text-gray-400 hover:text-white transition-colors" data-en="Certificates"
-                                    data-pt="Certificados">Certificates</a></li>
-                            <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors"
-                                    data-en="Projects" data-pt="Projetos">Projects</a></li>
-                            <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors"
-                                    data-en="Skills" data-pt="Habilidades">Skills</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h3 class="text-lg font-semibold mb-4 gradient-text" data-en="Connect" data-pt="Conectar">Connect</h3>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/mthfl" target="_blank"
-                                class="text-gray-400 hover:text-white social-icon transition-colors" >
-                                <i class="fab fa-github fa-2x"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/matheus-fl" target="_blank"
-                                class="text-gray-400 hover:text-white social-icon transition-colors" >
-                                <i class="fab fa-linkedin fa-2x"></i>
-                            </a>
-                            <a href="mailto:matheusfelix.dev@gmail.com"
-                                class="text-gray-400 hover:text-white social-icon transition-colors">
-                                <i class="fas fa-envelope fa-2x"></i>
-                            </a>
-                        </div>
+                <div class="footer-links">
+                    <h3 class="text-lg font-semibold mb-4 gradient-text" data-en="Connect" data-pt="Conectar">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/mthfl" target="_blank"
+                            class="text-gray-400 hover:text-white social-icon transition-colors" >
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/matheus-fl" target="_blank"
+                            class="text-gray-400 hover:text-white social-icon transition-colors" >
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="mailto:matheusfelix.dev@gmail.com"
+                            class="text-gray-400 hover:text-white social-icon transition-colors">
+                            <i class="fas fa-envelope fa-2x"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="section-divider mt-12"></div>
-            <p class="text-center text-gray-400 text-sm mt-8">© 2025 Matheus Felix. <span data-en="All rights reserved."
-                    data-pt="Todos os direitos reservados.">All rights reserved.</span></p>
         </div>
-    </footer>
+        <div class="section-divider mt-12"></div>
+        <p class="text-center text-gray-400 text-sm mt-8">© 2025 Matheus Felix. <span data-en="All rights reserved."
+                data-pt="Todos os direitos reservados.">All rights reserved.</span></p>
+    </div>
+</footer>
 
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const closeMenu = document.getElementById('close-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuBackdrop = document.getElementById('mobile-menu-backdrop');
+<script>
+    // Mobile menu functionality
+    const menuToggle = document.getElementById('menu-toggle');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBackdrop = document.getElementById('mobile-menu-backdrop');
 
-        function toggleMobileMenu() {
-            mobileMenu.classList.toggle('translate-x-full');
-            menuBackdrop.classList.toggle('hidden');
-            document.body.classList.toggle('overflow-hidden');
-        }
+    function toggleMobileMenu() {
+        mobileMenu.classList.toggle('translate-x-full');
+        menuBackdrop.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden');
+    }
 
-        menuToggle.addEventListener('click', toggleMobileMenu);
-        closeMenu.addEventListener('click', toggleMobileMenu);
-        menuBackdrop.addEventListener('click', toggleMobileMenu);
+    menuToggle.addEventListener('click', toggleMobileMenu);
+    closeMenu.addEventListener('click', toggleMobileMenu);
+    menuBackdrop.addEventListener('click', toggleMobileMenu);
 
-        const themeToggle = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
+    // Theme toggle functionality - fixed for both desktop and mobile
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    const htmlElement = document.documentElement;
 
-        function initializeTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-            htmlElement.classList.add(initialTheme);
-        }
+    function initializeTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+        htmlElement.classList.add(initialTheme);
+    }
 
-        function toggleTheme() {
-            const isLight = htmlElement.classList.contains('light');
-            htmlElement.classList.replace(isLight ? 'light' : 'dark', isLight ? 'dark' : 'light');
-            localStorage.setItem('theme', isLight ? 'dark' : 'light');
-        }
+    function toggleTheme() {
+        const isLight = htmlElement.classList.contains('light');
+        htmlElement.classList.replace(isLight ? 'light' : 'dark', isLight ? 'dark' : 'light');
+        localStorage.setItem('theme', isLight ? 'dark' : 'light');
+    }
 
-        themeToggle.addEventListener('click', toggleTheme);
-        initializeTheme();
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', toggleTheme);
+    });
 
-        const languageOptions = document.querySelectorAll('.language-option');
-        const currentLanguage = document.getElementById('current-language');
-        const languageToggle = document.querySelector('.language-toggle');
-        const languageSelector = document.querySelector('.language-selector');
+    initializeTheme();
 
-        function updateLanguage(lang) {
+    // Language selector functionality - fixed for both desktop and mobile
+    const languageOptions = document.querySelectorAll('.language-option');
+    const currentLanguage = document.getElementById('current-language');
+    const mobileLanguageToggle = document.querySelector('.mobile-language-selector .language-toggle');
+    const mobileLanguageSelector = document.querySelector('.mobile-language-selector');
+    const desktopLanguageSelector = document.querySelector('.desktop-language-selector');
+
+    function updateLanguage(lang) {
+        if (currentLanguage) {
             currentLanguage.textContent = lang.toUpperCase();
-            document.querySelectorAll('[data-en][data-pt]').forEach(element => {
-                element.textContent = element.dataset[lang];
-            });
-            localStorage.setItem('language', lang);
         }
+        
+        document.querySelectorAll('[data-en][data-pt]').forEach(element => {
+            element.textContent = element.dataset[lang];
+        });
+        
+        localStorage.setItem('language', lang);
+    }
 
-        languageOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                const lang = option.dataset.lang;
-                updateLanguage(lang);
-                languageSelector.classList.remove('active');
+    // Handle language option clicks
+    languageOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const lang = this.dataset.lang;
+            updateLanguage(lang);
+            
+            // Close dropdown
+            document.querySelectorAll('.language-selector').forEach(selector => {
+                selector.classList.remove('active');
             });
         });
+    });
 
-        if (languageToggle) {
-            languageToggle.addEventListener('click', () => {
-                languageSelector.classList.toggle('active');
+    // Mobile language toggle
+    if (mobileLanguageToggle) {
+        mobileLanguageToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileLanguageSelector.classList.toggle('active');
+        });
+    }
+
+    // Close language dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.language-selector')) {
+            document.querySelectorAll('.language-selector').forEach(selector => {
+                selector.classList.remove('active');
             });
         }
+    });
 
-        const savedLanguage = localStorage.getItem('language') || 'en';
-        updateLanguage(savedLanguage);
+    // Initialize language
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    updateLanguage(savedLanguage);
 
-        gsap.registerPlugin(ScrollTrigger);
+    // GSAP animations
+    gsap.registerPlugin(ScrollTrigger);
 
-        gsap.from(".hero-content", {
+    gsap.from(".hero-content", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.5
+    });
+
+    gsap.utils.toArray("section").forEach(section => {
+        gsap.from(section.querySelectorAll(".fade-in"), {
             opacity: 0,
-            y: 50,
-            duration: 1,
-            ease: "power3.out",
-            delay: 0.5
+            y: 30,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
         });
+    });
 
-        gsap.utils.toArray("section").forEach(section => {
-            gsap.from(section.querySelectorAll(".fade-in"), {
-                opacity: 0,
-                y: 30,
-                duration: 0.8,
-                stagger: 0.2,
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%",
-                    toggleActions: "play none none none"
-                }
-            });
-        });
-
-        const counters = document.querySelectorAll('.counter-animation');
-        counters.forEach(counter => {
-            gsap.from(counter, {
-                textContent: 0,
-                duration: 2,
-                ease: "power1.inOut",
-                snap: { textContent: 1 },
-                scrollTrigger: {
-                    trigger: counter,
-                    start: "top 80%",
-                    onEnter: () => {
-                        counter.classList.add('animated');
-                        gsap.to(counter, {
-                            textContent: counter.dataset.target,
-                            duration: 2,
-                            ease: "power1.inOut",
-                            snap: { textContent: 1 }
-                        });
-                    },
-                    once: true
-                }
-            });
-        });
-
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: ["#4ade80", "#3b82f6"] },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#ffffff",
-                    opacity: 0.4,
-                    width: 1
+    const counters = document.querySelectorAll('.counter-animation');
+    counters.forEach(counter => {
+        gsap.from(counter, {
+            textContent: 0,
+            duration: 2,
+            ease: "power1.inOut",
+            snap: { textContent: 1 },
+            scrollTrigger: {
+                trigger: counter,
+                start: "top 80%",
+                onEnter: () => {
+                    counter.classList.add('animated');
+                    gsap.to(counter, {
+                        textContent: counter.dataset.target,
+                        duration: 2,
+                        ease: "power1.inOut",
+                        snap: { textContent: 1 }
+                    });
                 },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false
-                }
+                once: true
+            }
+        });
+    });
+
+    // Particles.js initialization
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: ["#4ade80", "#3b82f6"] },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: true },
+            size: { value: 3, random: true },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1
             },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: true, mode: "repulse" },
-                    onclick: { enable: true, mode: "push" },
-                    resize: true
-                },
-                modes: {
-                    repulse: { distance: 100, duration: 0.4 },
-                    push: { particles_nb: 4 }
-                }
+            move: {
+                enable: true,
+                speed: 2,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "push" },
+                resize: true
             },
-            retina_detect: true
-        });
+            modes: {
+                repulse: { distance: 100, duration: 0.4 },
+                push: { particles_nb: 4 }
+            }
+        },
+        retina_detect: true
+    });
 
-        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-            img.addEventListener('load', () => {
-                img.classList.add('loaded');
-            });
+    // Lazy loading images
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
         });
+    });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    if (!mobileMenu.classList.contains('translate-x-full')) {
-                        toggleMobileMenu();
-                    }
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                if (!mobileMenu.classList.contains('translate-x-full')) {
+                    toggleMobileMenu();
                 }
-            });
+            }
         });
+    });
 
-        // Skills scroll buttons functionality
-        const skillsContainer = document.getElementById('skills-container');
-        const scrollLeftBtn = document.getElementById('scroll-left');
-        const scrollRightBtn = document.getElementById('scroll-right');
+    // Skills scroll buttons functionality
+    const skillsContainer = document.getElementById('skills-container');
+    const scrollLeftBtn = document.getElementById('scroll-left');
+    const scrollRightBtn = document.getElementById('scroll-right');
 
-        scrollLeftBtn.addEventListener('click', () => {
-            skillsContainer.scrollBy({ left: -300, behavior: 'smooth' });
-        });
+    scrollLeftBtn.addEventListener('click', () => {
+        skillsContainer.scrollBy({ left: -300, behavior: 'smooth' });
+    });
 
-        scrollRightBtn.addEventListener('click', () => {
-            skillsContainer.scrollBy({ left: 300, behavior: 'smooth' });
-        });
+    scrollRightBtn.addEventListener('click', () => {
+        skillsContainer.scrollBy({ left: 300, behavior: 'smooth' });
+    });
 
-        // Show/hide scroll buttons based on scroll position
-        skillsContainer.addEventListener('scroll', () => {
-            scrollLeftBtn.style.display = skillsContainer.scrollLeft > 0 ? 'block' : 'none';
-            scrollRightBtn.style.display = skillsContainer.scrollLeft < skillsContainer.scrollWidth - skillsContainer.clientWidth ? 'block' : 'none';
-        });
+    // Show/hide scroll buttons based on scroll position
+    skillsContainer.addEventListener('scroll', () => {
+        scrollLeftBtn.style.display = skillsContainer.scrollLeft > 0 ? 'block' : 'none';
+        scrollRightBtn.style.display = skillsContainer.scrollLeft < skillsContainer.scrollWidth - skillsContainer.clientWidth ? 'block' : 'none';
+    });
 
-        // Initial check for scroll buttons
-        window.addEventListener('load', () => {
-            scrollLeftBtn.style.display = 'none';
-            scrollRightBtn.style.display = skillsContainer.scrollWidth > skillsContainer.clientWidth ? 'block' : 'none';
-        });
-    </script>
+    // Initial check for scroll buttons
+    window.addEventListener('load', () => {
+        scrollLeftBtn.style.display = 'none';
+        scrollRightBtn.style.display = skillsContainer.scrollWidth > skillsContainer.clientWidth ? 'block' : 'none';
+    });
+</script>
 </body>
 
 </html>
