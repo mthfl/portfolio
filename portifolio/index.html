@@ -816,7 +816,7 @@
     }
 
     .about-section {
-        background-color: var(--about-bg-dark);
+        
         position: relative;
         overflow: hidden;
         padding: 5rem 1rem;
@@ -1044,6 +1044,215 @@
         background-color: #e5e7eb;
         color: #111827;
     }
+
+
+    .experience-section {
+    background-color: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 1rem;
+}
+
+.experience-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(rgba(56, 178, 172, 0.05) 2px, transparent 2px),
+        linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+}
+
+.experience-title {
+    color: var(--about-accent);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, #4ade80, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.experience-card {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+.light .experience-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(229, 231, 235, 0.9);
+    background: linear-gradient(135deg, #e5e7eb 0%, #f9fafb 100%);
+}
+
+.experience-card:hover {
+    transform: translateY(-6px) perspective(1000px) rotateX(2deg) rotateY(2deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: rgba(74, 222, 128, 0.5);
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.experience-card:hover::before {
+    left: 100%;
+}
+
+.experience-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.experience-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4ade80, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover .experience-icon {
+    transform: scale(1.1);
+}
+
+.experience-role {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.experience-company {
+    color: var(--about-accent);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.experience-location {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+.experience-period {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+.experience-description {
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.experience-details {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(156, 163, 175, 0.2);
+}
+
+.experience-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.experience-detail-item::before {
+    content: '\2022';
+    color: var(--about-accent);
+    font-size: 1rem;
+    line-height: 1;
+}
+
+@media (max-width: 640px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card {
+        padding: 1rem;
+    }
+
+    .experience-title {
+        font-size: 2rem;
+    }
+
+    .experience-role {
+        font-size: 1.2rem;
+    }
+
+    .experience-description {
+        font-size: 0.85rem;
+    }
+}
+
+.light .experience-section {
+    background-color: var(--bg-primary-light);
+}
+
+.light .experience-title {
+    color: #3b82f6;
+}
+
+.light .experience-company {
+    color: #3b82f6;
+}
+
+.light .experience-card:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.light .experience-icon {
+    background: linear-gradient(45deg, #3b82f6, #4ade80);
+}
+
+
+
+
 </style>
 </head>
 
@@ -1188,7 +1397,7 @@
     </div>
 </section>
 
-<section id="about" class="about-section">
+<section id="about" class="bg-gray-900">
     <h2 class="about-title" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
     
     <div class="about-card-container">
@@ -1226,7 +1435,7 @@
     </div>
 </section>
 
-<section id="certificates" class="py-20 bg-gray-800">
+<section id="certificates" class="py-20 experience-section">
     <div class="container-medium px-6 mx-auto">
         <h2 class="text-3xl font-bold text-center mb-6 gradient-text" data-en="Certifications" data-pt="Certificações">Certifications</h2>
         <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto" data-en="Professional certifications and achievements that demonstrate my expertise and continuous learning" data-pt="Certificações profissionais e conquistas que demonstram minha experiência e aprendizado contínuo">Professional certifications and achievements that demonstrate my expertise and continuous learning</p>
@@ -1329,11 +1538,86 @@
                     </svg>
                 </a>
             </div>
+
+            <div class="certificate-card card-hover">
+                <div class="flex items-center justify-between mb-6">
+                    <img src="./assets/img/rocketseat_logo.jpg" alt="DIO" class="h-10 rounded-md certificate-logo">
+                    <span class="text-gray-400 text-sm">2025</span>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">
+                    NLW Agents - Avançado</h3>
+                <a href="https://app.rocketseat.com.br/certificates/b5bf6ac4-dbe8-4479-b19a-265939af0514" target="_blank" class="certificate-link">
+                    <span data-en="View Certificate" data-pt="Ver Certificado">View Certificate</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="projects" class="py-20 bg-gray-900">
+<section id="experience" class="bg-gray-900">
+    <div class="container-medium px-6 mx-auto">
+        <h2 class="experience-title" data-en="Experience" data-pt="Experiência">Experience</h2>
+        <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto" data-en="My professional journey, showcasing roles and contributions in web development and design." data-pt="Minha jornada profissional, destacando papéis e contribuições em desenvolvimento e design web.">My professional journey, showcasing roles and contributions in web development and design.</p>
+
+        <div class="experience-grid">
+
+            <div class="experience-card card-hover">
+                <div class="experience-card-header">
+                    <div class="experience-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="experience-role" data-en="Freelance Developer" data-pt="Dev Freelancer">Freelance Developer</h3>
+                </div>
+                <div class="experience-company">
+                    <i class="fas fa-users text-sm"></i>
+                    <span data-en="Various Clients" data-pt="Vários Clientes">Various Clients</span>
+                </div>
+                <div class="experience-location" data-en="Remote, Worldwide" data-pt="Remoto, Mundial">Remote, Worldwide</div>
+                <div class="experience-period" data-en="Mar 2020 - Dec 2022" data-pt="Mar 2020 - Dez 2022">Mar 2022 - jan 2024</div>
+                <p class="experience-description" data-en="Delivered custom web solutions for diverse clients." data-pt="Entreguei soluções web personalizadas para diversos clientes.">Delivered custom web solutions for diverse clients.</p>
+            </div>
+
+            <div class="experience-card card-hover">
+                <div class="experience-card-header">
+                    <div class="experience-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="experience-role" data-en="Front-End Developer" data-pt="Dev Front-End">Front-End Developer</h3>
+                </div>
+                <div class="experience-company">
+                    <i class="fas fa-building text-sm"></i>
+                    <span data-en="Eeep Salaberga" data-pt="Eeep Salaberga">Eeep Salaberga</span>
+                </div>
+                <div class="experience-location" data-en="Maranguape, CE data-pt="Maranguape, CE>Maranguape, CE</div>
+                <div class="experience-period" data-en="jan 2024 - mar 2025" data-pt="jan 2024 - mar 2025">jan 2024 - mar 2025</div>
+                <p class="experience-description" data-en="Developed responsive web interfaces using modern technologies." data-pt="Desenvolvi interfaces web responsivas com tecnologias modernas.">Developed responsive web interfaces using modern technologies.</p>
+            </div>
+
+          
+
+            <div class="experience-card card-hover">
+                <div class="experience-card-header">
+                    <div class="experience-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="experience-role" data-en="Full Stack Developer " data-pt=" Dev Full Stack">Full Stack Developer </h3>
+                </div>
+                <div class="experience-company">
+                    <i class="fas fa-building text-sm"></i>
+                    <span data-en="Crede 1" data-pt="Crede 1">Crede 1</span>
+                </div>
+                <div class="experience-location" data-en="Ceará, Brazil" data-pt="Ceará, Brasil">Ceará, Brazil</div>
+                <div class="experience-period" data-en="Jun 2021 - Dec 2021" data-pt="Jun 2021 - Dez 2021">Jun 2021 - Dec 2021</div>
+                <p class="experience-description" data-en="Built and maintained web systems using PHP and MySQL." data-pt="Construí e mantive sistemas web usando PHP e MySQL.">Built and maintained web systems using PHP and MySQL.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="py-20 experience-section">
     <div class="container mx-auto px-4 sm:px-6">
         <h2 class="text-3xl font-bold text-center mb-6 gradient-text" data-en="Featured Projects" data-pt="Projetos em Destaque">Featured Projects</h2>
         <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto" data-en="A selection of my recent work showcasing my skills in front-end development, UX/UI design, and problem-solving." data-pt="Uma seleção dos meus trabalhos recentes que demonstram minhas habilidades em desenvolvimento front-end, design UX/UI e resolução de problemas.">A selection of my recent work showcasing my skills in front-end development, UX/UI design, and problem-solving.</p>
@@ -1484,8 +1768,7 @@
         </div>
     </div>
 </section>
-
-<section class="py-20 bg-gray-800" id="skills">
+<section class="py-20 bg-gray-900" id="skills">
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-10 gradient-text" data-en="My Skills" data-pt="Minhas Habilidades">My Skills</h2>
         <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto" data-en="Technologies and tools I use to bring products to life" data-pt="Tecnologias e ferramentas que uso para dar vida aos produtos">Technologies and tools I use to bring products to life</p>
@@ -1530,6 +1813,24 @@
                         </div>
                         <div class="text-center mt-2">
                             <span class="text-sm font-medium">Tailwind CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/php/php-original.svg" class="w-16 h-16 skill-icon" alt="PHP" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">PHP</span>
+                        </div>
+                    </div>
+
+                    <div class="relative bg-gray-800 rounded-xl p-5 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl w-36 sm:w-44 cursor-pointer skill-card">
+                        <div class="w-full h-24 sm:h-28 flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/icons/mysql/mysql-original.svg" class="w-16 h-16 skill-icon" alt="MySQL" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-sm font-medium">MySQL</span>
                         </div>
                     </div>
 
@@ -1613,6 +1914,9 @@
                             <span class="text-sm font-medium">API</span>
                         </div>
                     </div>
+                    
+
+                    
                 </div>
             </div>
 
